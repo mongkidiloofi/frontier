@@ -1,4 +1,4 @@
-# Frontier 🚀
+# Frontier
 
 A backend API to fetch and serve the latest research papers from arXiv.
 
