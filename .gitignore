@@ -1,3 +1,19 @@
+# in frontier/.gitignore
+
+# Python
 venv/
-__pychache__/
+backend/venv/
+__pycache__/
+*.pyc
+
+# Node / Svelte / Vite
+node_modules/
+frontend/node_modules/
+.svelte-kit/
+build/
+dist/
+
+# Secrets
 .env
+backend/.env
+frontend/.env
