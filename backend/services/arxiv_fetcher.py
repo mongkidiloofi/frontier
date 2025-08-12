@@ -29,7 +29,7 @@ async def fetch_and_store_arxiv():
 
     search = arxiv.Search(
         query=query_string,
-        max_results=100,
+        max_results=10,
         sort_by=arxiv.SortCriterion.SubmittedDate
     )
 

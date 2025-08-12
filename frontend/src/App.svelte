@@ -1,95 +1,126 @@
 <script>
   import { onMount } from 'svelte';
+  // Import the reusable component. The path assumes it's in src/lib/components/
+  import PaperCard from './lib/components/PaperCard.svelte';
 
-  let papers = [];
-  let isLoading = true;
-  let error = null;
+  // --- STATE VARIABLES ---
+  let arxivPapers = [];
+  let openReviewPapers = [];
+  
+  let isLoadingArxiv = true;
+  let isLoadingOpenReview = true;
+  let error = null; // A single error state for simplicity
 
-  onMount(async () => {
-    try {
-      const response = await fetch('http://127.0.0.1:8000/api/papers/arxiv');
-      if (!response.ok) {
-        throw new Error(`Server responded with status: ${response.status}`);
-      }
-      
-      let data = await response.json();
-      
-      // --- SORTING LOGIC ---
-      // Sort the array by reputation_score in descending order (highest first).
-      // The `|| 0` handles cases where the score might be null or undefined.
-      data.sort((a, b) => (b.reputation_score || 0) - (a.reputation_score || 0));
-      // --- END SORTING ---
-      
-      // Transform author data for easier display
-      papers = data.map(paper => ({
-        ...paper,
-        authors: paper.authors.map(author => author.name)
-      }));
+  // This variable controls which tab is currently visible
+  let activeTab = 'arxiv'; // Can be 'arxiv' or 'openreview'
 
-    } catch (e) {
-      error = e.message;
-    } finally {
-      isLoading = false;
-    }
+  // --- DATA FETCHING ---
+  onMount(() => {
+    // We run two independent fetch operations. This is more robust than Promise.all
+    // and allows one feed to load even if the other fails.
+
+    // Fetch arXiv papers (the reputation-ranked feed)
+    fetch('http://127.0.0.1:8000/api/papers/arxiv')
+      .then(response => {
+        if (!response.ok) throw new Error(`arXiv fetch failed: ${response.status}`);
+        return response.json();
+      })
+      .then(data => {
+        arxivPapers = data;
+      })
+      .catch(e => {
+        console.error("arXiv fetch error:", e);
+        error = error ? `${error}\n${e.message}` : e.message;
+      })
+      .finally(() => {
+        isLoadingArxiv = false;
+      });
+
+    // Fetch OpenReview papers (the peer-reviewed feed)
+    fetch('http://127.0.0.1:8000/api/papers/openreview')
+      .then(response => {
+        if (!response.ok) throw new Error(`OpenReview fetch failed: ${response.status}`);
+        return response.json();
+      })
+      .then(data => {
+        openReviewPapers = data;
+      })
+      .catch(e => {
+        console.error("OpenReview fetch error:", e);
+        error = error ? `${error}\n${e.message}` : e.message;
+      })
+      .finally(() => {
+        isLoadingOpenReview = false;
+      });
   });
 </script>
 
-<!-- 
-  The HTML structure is now styled with Tailwind utility classes.
-  Instead of a <style> block, the styles are applied directly to the elements.
--->
-<body class="bg-slate-50 font-sans text-slate-800">
-  <main class="max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
+<!-- The <main> tag is now the top-level element in this component -->
+<main class="max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
     
-    <header class="text-center pb-6 mb-8 border-b border-slate-200">
-      <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">Frontier</h1>
-      <p class="mt-2 text-lg text-slate-600">The bleeding edge of AI research, ranked by reputation.</p>
-    </header>
+  <header class="text-center pb-6 mb-8 border-b border-slate-200">
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">Frontier</h1>
+    <p class="mt-2 text-lg text-slate-600">The bleeding edge of AI research, curated and ranked.</p>
+  </header>
 
-    <div>
-      {#if isLoading}
-        <div class="text-center py-12 text-slate-500">
-          <p>Loading latest papers...</p>
-        </div>
-      {:else if error}
-        <div class="bg-red-100 border border-red-300 text-red-800 rounded-lg p-6 text-center">
-          <p class="font-bold">Could Not Fetch Papers</p>
-          <p class="mt-2">Error: {error}</p>
-        </div>
+  <!-- Tab Navigation -->
+  <div class="mb-8 flex justify-center border-b border-slate-200">
+    <button 
+      class="px-6 py-3 font-semibold transition-colors duration-200 focus:outline-none"
+      class:text-blue-600={activeTab === 'arxiv'}
+      class:border-b-2={activeTab === 'arxiv'}
+      class:border-blue-600={activeTab === 'arxiv'}
+      class:text-slate-500={activeTab !== 'arxiv'}
+      on:click={() => activeTab = 'arxiv'}>
+      Latest Pre-prints
+    </button>
+    <button 
+      class="px-6 py-3 font-semibold transition-colors duration-200 focus:outline-none"
+      class:text-blue-600={activeTab === 'openreview'}
+      class:border-b-2={activeTab === 'openreview'}
+      class:border-blue-600={activeTab === 'openreview'}
+      class:text-slate-500={activeTab !== 'openreview'}
+      on:click={() => activeTab = 'openreview'}>
+      Top Conference Papers
+    </button>
+  </div>
+
+  <!-- Main Content Area -->
+  <div>
+    {#if error && !isLoadingArxiv && !isLoadingOpenReview}
+      <div class="bg-red-100 border border-red-300 text-red-800 rounded-lg p-6 text-center">
+        <p class="font-bold">Could Not Fetch Papers</p>
+        <p class="mt-2">Error: {error}</p>
+      </div>
+    {/if}
+
+    {#if activeTab === 'arxiv'}
+      {#if isLoadingArxiv}
+        <p class="text-center text-slate-500 py-8">Loading arXiv papers...</p>
+      {:else if arxivPapers.length === 0 && !error}
+        <p class="text-center text-slate-500 py-8">No new arXiv papers found.</p>
       {:else}
-        <!-- space-y-8 adds vertical space between all child elements -->
         <div class="space-y-8">
-          {#each papers as paper (paper.id)}
-            <!-- A single paper "card" -->
-            <article class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-lg hover:border-blue-400 transition-all duration-200 ease-in-out">
-              
-              <div class="flex justify-between items-center text-xs text-slate-500 mb-3">
-                <span class="font-semibold bg-blue-100 text-blue-800 rounded-full px-3 py-1">
-                  Reputation Score: {paper.reputation_score.toFixed(1)}
-                </span>
-                <span>Submitted: {paper.submitted_date}</span>
-              </div>
-              
-              <h2 class="text-xl font-bold text-slate-900 mb-2 leading-tight">
-                <a href={paper.pdf_url} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
-                  {paper.title}
-                </a>
-              </h2>
-              
-              <p class="text-sm text-slate-600 italic mb-4">
-                {paper.authors.join(', ')}
-              </p>
-              
-              <!-- The `prose` class from the typography plugin makes this look nice automatically -->
-              <div class="prose prose-slate max-w-none text-slate-700">
-                <p>{paper.abstract}</p>
-              </div>
-
-            </article>
+          {#each arxivPapers as paper (paper.id)}
+            <PaperCard {paper} />
           {/each}
         </div>
       {/if}
-    </div>
+    {:else if activeTab === 'openreview'}
+      {#if isLoadingOpenReview}
+        <p class="text-center text-slate-500 py-8">Loading OpenReview papers...</p>
+      {:else if openReviewPapers.length === 0 && !error}
+        <p class="text-center text-slate-500 py-8">No new OpenReview papers found.</p>
+      {:else}
+        <div class="space-y-8">
+          {#each openReviewPapers as paper (paper.id)}
+            <PaperCard {paper} />
+          {/each}
+        </div>
+      {/if}
+    {/if}
+  </div>
 
-  </main>
-</body>
+</main>
+
+<!-- No <style> block is needed here as Tailwind handles all styling via classes -->
