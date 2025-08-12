@@ -22,7 +22,7 @@ TOP_TIER_VENUES = {
 
     # == Natural Language Processing ==
     "ACL": {"acl", "association for computational linguistics"},
-    "EMNLP": {"emnlp", "empirical methods in natural language processing"},
+    "EMNLP": {"emnlp", "empiricaal methods in natural language processing"},
     "NAACL": {"naacl", "north american chapter of the association for computational linguistics"},
     "TACL": {"tacl", "transactions of the association for computational linguistics"},
 

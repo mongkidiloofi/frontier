@@ -1,12 +1,16 @@
 import asyncio
 from model.database import engine, Base
-from model.arxiv_paper import ArxivPaper # Import your model
+# --- THE FIX IS HERE ---
+# We now import the single, unified 'Paper' model from 'model/paper.py'.
+from model.paper import Paper
+# --- END OF FIX ---
 
 async def create_db_and_tables():
     async with engine.begin() as conn:
-        # This deletes the old table if it exists, ensuring a fresh start
+        print("Dropping all existing tables...")
         await conn.run_sync(Base.metadata.drop_all)
-        # This creates the new table based on your ArxivPaper model
+        print("Creating new tables based on models...")
+        # Base.metadata knows about the 'papers' table because we imported the Paper class.
         await conn.run_sync(Base.metadata.create_all)
     await engine.dispose()
     print("✅ Tables recreated successfully in the database.")

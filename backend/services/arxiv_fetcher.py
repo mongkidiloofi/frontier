@@ -1,18 +1,17 @@
 import asyncio
 import arxiv
-from sqlalchemy import select
+from sqlalchemy import select, and_
 from datetime import datetime
 
 # Import the components from our application structure
-from model.database import SessionMaker
-from model.arxiv_paper import ArxivPaper
-from services.semantic_scholar_service import semantic_scholar_service
+from model.database import SessionMaker  # Assuming this path is correct
+from model.paper import Paper # <-- CHANGED: Using the unified Paper model
+from services.semantic_scholar_service import semantic_scholar_service # Assuming this path is correct
 
 async def fetch_and_store_arxiv():
     """
-    Fetches the latest papers from arXiv for a broad set of CS categories,
-    calculates a reputation score by querying the Semantic Scholar API,
-    and stores new papers in the database.
+    Fetches the latest papers from arXiv, calculates a reputation score,
+    and stores them in the database using the unified Paper model.
     """
     client = arxiv.Client()
     
@@ -30,7 +29,7 @@ async def fetch_and_store_arxiv():
 
     search = arxiv.Search(
         query=query_string,
-        max_results=100,  # <-- Set back to 100
+        max_results=100,
         sort_by=arxiv.SortCriterion.SubmittedDate
     )
 
@@ -43,33 +42,46 @@ async def fetch_and_store_arxiv():
         for result in results:
             arxiv_id = result.entry_id.split('/')[-1]
 
-            # Check if this paper already exists in our database
-            existing_paper_query = select(ArxivPaper).where(ArxivPaper.arxiv_id == arxiv_id)
+            # --- CHANGED: Check if this paper already exists using the unified model ---
+            # We check for the source_id AND the source to be sure.
+            existing_paper_query = select(Paper).where(
+                and_(Paper.source_id == arxiv_id, Paper.source == 'arxiv')
+            )
             existing_paper_result = await session.execute(existing_paper_query)
             if existing_paper_result.scalars().first():
                 continue
+            # --- END OF CHANGE ---
 
             print(f"\n-> Processing new paper: {result.title[:60]}...")
             
-            # Prepare the author list in the format our service expects
+            # Prepare the author list
             authors_list = [{'name': author.name} for author in result.authors]
 
-            # --- REPUTATION SCORING ---
+            # --- REPUTATION SCORING (No change here) ---
             print("   Querying Semantic Scholar for author reputation...")
             reputation_score = await semantic_scholar_service.calculate_paper_score(authors_list)
             print(f"  -> Calculated Total Reputation Score: {reputation_score}")
             # --- END OF SCORING ---
 
-            # Create a new ArxivPaper object with all the data
-            new_paper = ArxivPaper(
-                arxiv_id=arxiv_id,
+            # --- CHANGED: Create a new unified Paper object ---
+            new_paper = Paper(
+                source='arxiv',
+                source_id=arxiv_id,
                 title=result.title,
                 authors=authors_list,
                 abstract=result.summary.replace('\n', ' '),
+                paper_url=result.entry_id,  # Link to the abstract page
                 pdf_url=result.pdf_url,
-                submitted_date=result.published.strftime("%Y-%m-%d"),
-                reputation_score=reputation_score
+                venue_or_category=result.primary_category, # Use primary category as the "venue"
+                year_or_date=result.published.strftime("%Y-%m-%d"),
+                keywords=result.categories, # Use all categories as keywords
+                reputation_score=reputation_score,
+                # These fields are not applicable to arXiv, so they are None by default
+                category=None,
+                replies_data=None
             )
+            # --- END OF CHANGE ---
+            
             papers_to_add.append(new_paper)
         
         if papers_to_add:
