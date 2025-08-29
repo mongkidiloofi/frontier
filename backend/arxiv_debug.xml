@@ -1,0 +1,2448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <link href="http://arxiv.org/api/query?search_query%3Dcat%3Acs.AI%20OR%20cat%3Acs.CL%20OR%20cat%3Acs.CV%20OR%20cat%3Acs.LG%20OR%20cat%3Acs.MA%20OR%20cat%3Acs.RO%20OR%20cat%3Amath.OC%20OR%20cat%3Aeess.SY%20OR%20cat%3Aq-bio.NC%20OR%20cat%3Astat.ML%26id_list%3D%26start%3D0%26max_results%3D50" rel="self" type="application/atom+xml"/>
+  <title type="html">ArXiv Query: search_query=cat:cs.AI OR cat:cs.CL OR cat:cs.CV OR cat:cs.LG OR cat:cs.MA OR cat:cs.RO OR cat:math.OC OR cat:eess.SY OR cat:q-bio.NC OR cat:stat.ML&amp;id_list=&amp;start=0&amp;max_results=50</title>
+  <id>http://arxiv.org/api/FwvqRnW1GI5IfItXWlNNyJ/CukI</id>
+  <updated>2025-08-28T00:00:00-04:00</updated>
+  <opensearch:totalResults xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">569955</opensearch:totalResults>
+  <opensearch:startIndex xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">0</opensearch:startIndex>
+  <opensearch:itemsPerPage xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/">50</opensearch:itemsPerPage>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20096v1</id>
+    <updated>2025-08-27T17:59:50Z</updated>
+    <published>2025-08-27T17:59:50Z</published>
+    <title>CODA: Coordinating the Cerebrum and Cerebellum for a Dual-Brain Computer
+  Use Agent with Decoupled Reinforcement Learning</title>
+    <summary>  Autonomous agents for Graphical User Interfaces (GUIs) face significant
+challenges in specialized domains such as scientific computing, where both
+long-horizon planning and precise execution are required. Existing approaches
+suffer from a trade-off: generalist agents excel at planning but perform poorly
+in execution, while specialized agents demonstrate the opposite weakness.
+Recent compositional frameworks attempt to bridge this gap by combining a
+planner and an actor, but they are typically static and non-trainable, which
+prevents adaptation from experience. This is a critical limitation given the
+scarcity of high-quality data in scientific domains. To address these
+limitations, we introduce CODA, a novel and trainable compositional framework
+that integrates a generalist planner (Cerebrum) with a specialist executor
+(Cerebellum), trained via a dedicated two-stage pipeline. In the first stage,
+Specialization, we apply a decoupled GRPO approach to train an expert planner
+for each scientific application individually, bootstrapping from a small set of
+task trajectories. In the second stage, Generalization, we aggregate all
+successful trajectories from the specialized experts to build a consolidated
+dataset, which is then used for supervised fine-tuning of the final planner.
+This equips CODA with both robust execution and cross-domain generalization.
+Evaluated on four challenging applications from the ScienceBoard benchmark,
+CODA significantly outperforms baselines and establishes a new state of the art
+among open-source models.
+</summary>
+    <author>
+      <name>Zeyi Sun</name>
+    </author>
+    <author>
+      <name>Yuhang Cao</name>
+    </author>
+    <author>
+      <name>Jianze Liang</name>
+    </author>
+    <author>
+      <name>Qiushi Sun</name>
+    </author>
+    <author>
+      <name>Ziyu Liu</name>
+    </author>
+    <author>
+      <name>Zhixiong Zhang</name>
+    </author>
+    <author>
+      <name>Yuhang Zang</name>
+    </author>
+    <author>
+      <name>Xiaoyi Dong</name>
+    </author>
+    <author>
+      <name>Kai Chen</name>
+    </author>
+    <author>
+      <name>Dahua Lin</name>
+    </author>
+    <author>
+      <name>Jiaqi Wang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">code available at this url: https://github.com/OpenIXCLab/CODA</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20096v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20096v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20095v1</id>
+    <updated>2025-08-27T17:59:36Z</updated>
+    <published>2025-08-27T17:59:36Z</published>
+    <title>Discrete-Guided Diffusion for Scalable and Safe Multi-Robot Motion
+  Planning</title>
+    <summary>  Multi-Robot Motion Planning (MRMP) involves generating collision-free
+trajectories for multiple robots operating in a shared continuous workspace.
+While discrete multi-agent path finding (MAPF) methods are broadly adopted due
+to their scalability, their coarse discretization severely limits trajectory
+quality. In contrast, continuous optimization-based planners offer
+higher-quality paths but suffer from the curse of dimensionality, resulting in
+poor scalability with respect to the number of robots. This paper tackles the
+limitations of these two approaches by introducing a novel framework that
+integrates discrete MAPF solvers with constrained generative diffusion models.
+The resulting framework, called Discrete-Guided Diffusion (DGD), has three key
+characteristics: (1) it decomposes the original nonconvex MRMP problem into
+tractable subproblems with convex configuration spaces, (2) it combines
+discrete MAPF solutions with constrained optimization techniques to guide
+diffusion models capture complex spatiotemporal dependencies among robots, and
+(3) it incorporates a lightweight constraint repair mechanism to ensure
+trajectory feasibility. The proposed method sets a new state-of-the-art
+performance in large-scale, complex environments, scaling to 100 robots while
+achieving planning efficiency and high success rates.
+</summary>
+    <author>
+      <name>Jinhao Liang</name>
+    </author>
+    <author>
+      <name>Sven Koenig</name>
+    </author>
+    <author>
+      <name>Ferdinando Fioretto</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.20095v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20095v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20089v1</id>
+    <updated>2025-08-27T17:55:39Z</updated>
+    <published>2025-08-27T17:55:39Z</published>
+    <title>Bridging Domain Gaps for Fine-Grained Moth Classification Through
+  Expert-Informed Adaptation and Foundation Model Priors</title>
+    <summary>  Labelling images of Lepidoptera (moths) from automated camera systems is
+vital for understanding insect declines. However, accurate species
+identification is challenging due to domain shifts between curated images and
+noisy field imagery. We propose a lightweight classification approach,
+combining limited expert-labelled field data with knowledge distillation from
+the high-performance BioCLIP2 foundation model into a ConvNeXt-tiny
+architecture. Experiments on 101 Danish moth species from AMI camera systems
+demonstrate that BioCLIP2 substantially outperforms other methods and that our
+distilled lightweight model achieves comparable accuracy with significantly
+reduced computational cost. These insights offer practical guidelines for the
+development of efficient insect monitoring systems and bridging domain gaps for
+fine-grained classification.
+</summary>
+    <author>
+      <name>Ross J Gardiner</name>
+    </author>
+    <author>
+      <name>Guillaume Mougeot</name>
+    </author>
+    <author>
+      <name>Sareh Rowlands</name>
+    </author>
+    <author>
+      <name>Benno I Simmons</name>
+    </author>
+    <author>
+      <name>Flemming Helsing</name>
+    </author>
+    <author>
+      <name>Toke Thomas Høye</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.20089v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20089v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20088v1</id>
+    <updated>2025-08-27T17:55:38Z</updated>
+    <published>2025-08-27T17:55:38Z</published>
+    <title>AudioStory: Generating Long-Form Narrative Audio with Large Language
+  Models</title>
+    <summary>  Recent advances in text-to-audio (TTA) generation excel at synthesizing short
+audio clips but struggle with long-form narrative audio, which requires
+temporal coherence and compositional reasoning. To address this gap, we propose
+AudioStory, a unified framework that integrates large language models (LLMs)
+with TTA systems to generate structured, long-form audio narratives. AudioStory
+possesses strong instruction-following reasoning generation capabilities. It
+employs LLMs to decompose complex narrative queries into temporally ordered
+sub-tasks with contextual cues, enabling coherent scene transitions and
+emotional tone consistency. AudioStory has two appealing features: (1)
+Decoupled bridging mechanism: AudioStory disentangles LLM-diffuser
+collaboration into two specialized components, i.e., a bridging query for
+intra-event semantic alignment and a residual query for cross-event coherence
+preservation. (2) End-to-end training: By unifying instruction comprehension
+and audio generation within a single end-to-end framework, AudioStory
+eliminates the need for modular training pipelines while enhancing synergy
+between components. Furthermore, we establish a benchmark AudioStory-10K,
+encompassing diverse domains such as animated soundscapes and natural sound
+narratives. Extensive experiments show the superiority of AudioStory on both
+single-audio generation and narrative audio generation, surpassing prior TTA
+baselines in both instruction-following ability and audio fidelity. Our code is
+available at https://github.com/TencentARC/AudioStory
+</summary>
+    <author>
+      <name>Yuxin Guo</name>
+    </author>
+    <author>
+      <name>Teng Wang</name>
+    </author>
+    <author>
+      <name>Yuying Ge</name>
+    </author>
+    <author>
+      <name>Shijie Ma</name>
+    </author>
+    <author>
+      <name>Yixiao Ge</name>
+    </author>
+    <author>
+      <name>Wei Zou</name>
+    </author>
+    <author>
+      <name>Ying Shan</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.20088v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20088v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SD" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20085v1</id>
+    <updated>2025-08-27T17:53:46Z</updated>
+    <published>2025-08-27T17:53:46Z</published>
+    <title>HERMES: Human-to-Robot Embodied Learning from Multi-Source Motion Data
+  for Mobile Dexterous Manipulation</title>
+    <summary>  Leveraging human motion data to impart robots with versatile manipulation
+skills has emerged as a promising paradigm in robotic manipulation.
+Nevertheless, translating multi-source human hand motions into feasible robot
+behaviors remains challenging, particularly for robots equipped with
+multi-fingered dexterous hands characterized by complex, high-dimensional
+action spaces. Moreover, existing approaches often struggle to produce policies
+capable of adapting to diverse environmental conditions. In this paper, we
+introduce HERMES, a human-to-robot learning framework for mobile bimanual
+dexterous manipulation. First, HERMES formulates a unified reinforcement
+learning approach capable of seamlessly transforming heterogeneous human hand
+motions from multiple sources into physically plausible robotic behaviors.
+Subsequently, to mitigate the sim2real gap, we devise an end-to-end, depth
+image-based sim2real transfer method for improved generalization to real-world
+scenarios. Furthermore, to enable autonomous operation in varied and
+unstructured environments, we augment the navigation foundation model with a
+closed-loop Perspective-n-Point (PnP) localization mechanism, ensuring precise
+alignment of visual goals and effectively bridging autonomous navigation and
+dexterous manipulation. Extensive experimental results demonstrate that HERMES
+consistently exhibits generalizable behaviors across diverse, in-the-wild
+scenarios, successfully performing numerous complex mobile bimanual dexterous
+manipulation tasks. Project Page:https:/gemcollector.github.io/HERMES/.
+</summary>
+    <author>
+      <name>Zhecheng Yuan</name>
+    </author>
+    <author>
+      <name>Tianming Wei</name>
+    </author>
+    <author>
+      <name>Langzhe Gu</name>
+    </author>
+    <author>
+      <name>Pu Hua</name>
+    </author>
+    <author>
+      <name>Tianhai Liang</name>
+    </author>
+    <author>
+      <name>Yuanpei Chen</name>
+    </author>
+    <author>
+      <name>Huazhe Xu</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.20085v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20085v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20083v1</id>
+    <updated>2025-08-27T17:49:28Z</updated>
+    <published>2025-08-27T17:49:28Z</published>
+    <title>Disabling Self-Correction in Retrieval-Augmented Generation via Stealthy
+  Retriever Poisoning</title>
+    <summary>  Retrieval-Augmented Generation (RAG) has become a standard approach for
+improving the reliability of large language models (LLMs). Prior work
+demonstrates the vulnerability of RAG systems by misleading them into
+generating attacker-chosen outputs through poisoning the knowledge base.
+However, this paper uncovers that such attacks could be mitigated by the strong
+\textit{self-correction ability (SCA)} of modern LLMs, which can reject false
+context once properly configured. This SCA poses a significant challenge for
+attackers aiming to manipulate RAG systems.
+  In contrast to previous poisoning methods, which primarily target the
+knowledge base, we introduce \textsc{DisarmRAG}, a new poisoning paradigm that
+compromises the retriever itself to suppress the SCA and enforce
+attacker-chosen outputs. This compromisation enables the attacker to
+straightforwardly embed anti-SCA instructions into the context provided to the
+generator, thereby bypassing the SCA. To this end, we present a
+contrastive-learning-based model editing technique that performs localized and
+stealthy edits, ensuring the retriever returns a malicious instruction only for
+specific victim queries while preserving benign retrieval behavior. To further
+strengthen the attack, we design an iterative co-optimization framework that
+automatically discovers robust instructions capable of bypassing prompt-based
+defenses. We extensively evaluate DisarmRAG across six LLMs and three QA
+benchmarks. Our results show near-perfect retrieval of malicious instructions,
+which successfully suppress SCA and achieve attack success rates exceeding 90\%
+under diverse defensive prompts. Also, the edited retriever remains stealthy
+under several detection methods, highlighting the urgent need for
+retriever-centric defenses.
+</summary>
+    <author>
+      <name>Yanbo Dai</name>
+    </author>
+    <author>
+      <name>Zhenlan Ji</name>
+    </author>
+    <author>
+      <name>Zongjie Li</name>
+    </author>
+    <author>
+      <name>Kuan Li</name>
+    </author>
+    <author>
+      <name>Shuai Wang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.20083v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20083v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20080v1</id>
+    <updated>2025-08-27T17:46:46Z</updated>
+    <published>2025-08-27T17:46:46Z</published>
+    <title>Seam360GS: Seamless 360° Gaussian Splatting from Real-World
+  Omnidirectional Images</title>
+    <summary>  360-degree visual content is widely shared on platforms such as YouTube and
+plays a central role in virtual reality, robotics, and autonomous navigation.
+However, consumer-grade dual-fisheye systems consistently yield imperfect
+panoramas due to inherent lens separation and angular distortions. In this
+work, we introduce a novel calibration framework that incorporates a
+dual-fisheye camera model into the 3D Gaussian splatting pipeline. Our approach
+not only simulates the realistic visual artifacts produced by dual-fisheye
+cameras but also enables the synthesis of seamlessly rendered 360-degree
+images. By jointly optimizing 3D Gaussian parameters alongside calibration
+variables that emulate lens gaps and angular distortions, our framework
+transforms imperfect omnidirectional inputs into flawless novel view synthesis.
+Extensive evaluations on real-world datasets confirm that our method produces
+seamless renderings-even from imperfect images-and outperforms existing
+360-degree rendering models.
+</summary>
+    <author>
+      <name>Changha Shin</name>
+    </author>
+    <author>
+      <name>Woong Oh Cho</name>
+    </author>
+    <author>
+      <name>Seon Joo Kim</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to ICCV 2025. 10 pages main text, 4 figures, 4 tables,
+  supplementary material included</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20080v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20080v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20076v1</id>
+    <updated>2025-08-27T17:41:40Z</updated>
+    <published>2025-08-27T17:41:40Z</published>
+    <title>Anomaly Detection in Networked Bandits</title>
+    <summary>  The nodes' interconnections on a social network often reflect their
+dependencies and information-sharing behaviors. Nevertheless, abnormal nodes,
+which significantly deviate from most of the network concerning patterns or
+behaviors, can lead to grave consequences. Therefore, it is imperative to
+design efficient online learning algorithms that robustly learn users'
+preferences while simultaneously detecting anomalies.
+  We introduce a novel bandit algorithm to address this problem. Through
+network knowledge, the method characterizes the users' preferences and
+residuals of feature information. By learning and analyzing these preferences
+and residuals, it develops a personalized recommendation strategy for each user
+and simultaneously detects anomalies. We rigorously prove an upper bound on the
+regret of the proposed algorithm and experimentally compare it with several
+state-of-the-art collaborative contextual bandit algorithms on both synthetic
+and real-world datasets.
+</summary>
+    <author>
+      <name>Xiaotong Cheng</name>
+    </author>
+    <author>
+      <name>Setareh Maghsudi</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.20076v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20076v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20072v1</id>
+    <updated>2025-08-27T17:39:11Z</updated>
+    <published>2025-08-27T17:39:11Z</published>
+    <title>Discrete Diffusion VLA: Bringing Discrete Diffusion to Action Decoding
+  in Vision-Language-Action Policies</title>
+    <summary>  Vision-Language-Action (VLA) models adapt large vision-language backbones to
+map images and instructions to robot actions. However, prevailing VLA decoders
+either generate actions autoregressively in a fixed left-to-right order or
+attach continuous diffusion or flow matching heads outside the backbone,
+demanding specialized training and iterative sampling that hinder a unified,
+scalable architecture. We present Discrete Diffusion VLA, a single-transformer
+policy that models discretized action chunks with discrete diffusion and is
+trained with the same cross-entropy objective as the VLM backbone. The design
+retains diffusion's progressive refinement paradigm while remaining natively
+compatible with the discrete token interface of VLMs. Our method achieves an
+adaptive decoding order that resolves easy action elements before harder ones
+and uses secondary remasking to revisit uncertain predictions across refinement
+rounds, which improves consistency and enables robust error correction. This
+unified decoder preserves pretrained vision language priors, supports parallel
+decoding, breaks the autoregressive bottleneck, and reduces the number of
+function evaluations. Discrete Diffusion VLA achieves 96.3% avg. SR on LIBERO,
+71.2% visual matching on SimplerEnv Fractal and 49.3% overall on SimplerEnv
+Bridge, improving over both autoregressive and continuous diffusion baselines.
+These findings indicate that discrete-diffusion action decoder supports precise
+action modeling and consistent training, laying groundwork for scaling VLA to
+larger models and datasets.
+</summary>
+    <author>
+      <name>Zhixuan Liang</name>
+    </author>
+    <author>
+      <name>Yizhuo Li</name>
+    </author>
+    <author>
+      <name>Tianshuo Yang</name>
+    </author>
+    <author>
+      <name>Chengyue Wu</name>
+    </author>
+    <author>
+      <name>Sitong Mao</name>
+    </author>
+    <author>
+      <name>Liuao Pei</name>
+    </author>
+    <author>
+      <name>Xiaokang Yang</name>
+    </author>
+    <author>
+      <name>Jiangmiao Pang</name>
+    </author>
+    <author>
+      <name>Yao Mu</name>
+    </author>
+    <author>
+      <name>Ping Luo</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">15 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20072v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20072v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20071v1</id>
+    <updated>2025-08-27T17:34:28Z</updated>
+    <published>2025-08-27T17:34:28Z</published>
+    <title>A Partially Derivative-Free Proximal Method for Composite Multiobjective
+  Optimization in the Hölder Setting</title>
+    <summary>  This paper presents an algorithm for solving multiobjective optimization
+problems involving composite functions, where we minimize a quadratic model
+that approximates $F(x) - F(x^k)$ and that can be derivative-free. We establish
+theoretical assumptions about the component functions of the composition and
+provide comprehensive convergence and complexity analysis. Specifically, we
+prove that the proposed method converges to a weakly $\varepsilon$-approximate
+Pareto point in at most
+$\mathcal{O}\left(\varepsilon^{-\frac{\beta+1}{\beta}}\right)$ iterations,
+where $\beta$ denotes the H\"{o}lder exponent of the gradient. The algorithm
+incorporates gradient approximations and a scaling matrix $B_k$ to achieve an
+optimal balance between computational accuracy and efficiency. Numerical
+experiments on robust biobjective instances with Lipschitz and
+H\"{o}lder-gradient components illustrate the method's behavior. In these
+tests, the proposed approach was able to approximate the Pareto front under
+different levels of uncertainty and consistently recovered distinct solutions,
+even in challenging cases where the objectives have only H\"{o}lder continuous
+gradients.
+</summary>
+    <author>
+      <name>V. S. Amaral</name>
+    </author>
+    <author>
+      <name>P. B. Assunção</name>
+    </author>
+    <author>
+      <name>D. R. Souza</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">29 pages, 6 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20071v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20071v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20068v1</id>
+    <updated>2025-08-27T17:22:34Z</updated>
+    <published>2025-08-27T17:22:34Z</published>
+    <title>11Plus-Bench: Demystifying Multimodal LLM Spatial Reasoning with
+  Cognitive-Inspired Analysis</title>
+    <summary>  For human cognitive process, spatial reasoning and perception are closely
+entangled, yet the nature of this interplay remains underexplored in the
+evaluation of multimodal large language models (MLLMs). While recent MLLM
+advancements show impressive performance on reasoning, their capacity for
+human-like spatial cognition remains an open question. In this work, we
+introduce a systematic evaluation framework to assess the spatial reasoning
+abilities of state-of-the-art MLLMs relative to human performance. Central to
+our work is 11Plus-Bench, a high-quality benchmark derived from realistic
+standardized spatial aptitude tests. 11Plus-Bench also features fine-grained
+expert annotations of both perceptual complexity and reasoning process,
+enabling detailed instance-level analysis of model behavior. Through extensive
+experiments across 14 MLLMs and human evaluation, we find that current MLLMs
+exhibit early signs of spatial cognition. Despite a large performance gap
+compared to humans, MLLMs' cognitive profiles resemble those of humans in that
+cognitive effort correlates strongly with reasoning-related complexity.
+However, instance-level performance in MLLMs remains largely random, whereas
+human correctness is highly predictable and shaped by abstract pattern
+complexity. These findings highlight both emerging capabilities and limitations
+in current MLLMs' spatial reasoning capabilities and provide actionable
+insights for advancing model design.
+</summary>
+    <author>
+      <name>Chengzu Li</name>
+    </author>
+    <author>
+      <name>Wenshan Wu</name>
+    </author>
+    <author>
+      <name>Huanyu Zhang</name>
+    </author>
+    <author>
+      <name>Qingtao Li</name>
+    </author>
+    <author>
+      <name>Zeyu Gao</name>
+    </author>
+    <author>
+      <name>Yan Xia</name>
+    </author>
+    <author>
+      <name>José Hernández-Orallo</name>
+    </author>
+    <author>
+      <name>Ivan Vulić</name>
+    </author>
+    <author>
+      <name>Furu Wei</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">9 pages, 4 figures (22 pages, 7 figures, 7 tables including
+  references and appendices)</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20068v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20068v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20067v1</id>
+    <updated>2025-08-27T17:21:32Z</updated>
+    <published>2025-08-27T17:21:32Z</published>
+    <title>Neural Conditional Simulation for Complex Spatial Processes</title>
+    <summary>  A key objective in spatial statistics is to simulate from the distribution of
+a spatial process at a selection of unobserved locations conditional on
+observations (i.e., a predictive distribution) to enable spatial prediction and
+uncertainty quantification. However, exact conditional simulation from this
+predictive distribution is intractable or inefficient for many spatial process
+models. In this paper, we propose neural conditional simulation (NCS), a
+general method for spatial conditional simulation that is based on neural
+diffusion models. Specifically, using spatial masks, we implement a conditional
+score-based diffusion model that evolves Gaussian noise into samples from a
+predictive distribution when given a partially observed spatial field and
+spatial process parameters as inputs. The diffusion model relies on a neural
+network that only requires unconditional samples from the spatial process for
+training. Once trained, the diffusion model is amortized with respect to the
+observations in the partially observed field, the number and locations of those
+observations, and the spatial process parameters, and can therefore be used to
+conditionally simulate from a broad class of predictive distributions without
+retraining the neural network. We assess the NCS-generated simulations against
+simulations from the true conditional distribution of a Gaussian process model,
+and against Markov chain Monte Carlo (MCMC) simulations from a Brown--Resnick
+process model for spatial extremes. In the latter case, we show that it is more
+efficient and accurate to conditionally simulate using NCS than classical MCMC
+techniques implemented in standard software. We conclude that NCS enables
+efficient and accurate conditional simulation from spatial predictive
+distributions that are challenging to sample from using traditional methods.
+</summary>
+    <author>
+      <name>Julia Walchessen</name>
+    </author>
+    <author>
+      <name>Andrew Zammit-Mangion</name>
+    </author>
+    <author>
+      <name>Raphaël Huser</name>
+    </author>
+    <author>
+      <name>Mikael Kuusela</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">59 pages, 11 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20067v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20067v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20066v1</id>
+    <updated>2025-08-27T17:21:22Z</updated>
+    <published>2025-08-27T17:21:22Z</published>
+    <title>PAUL: Uncertainty-Guided Partition and Augmentation for Robust
+  Cross-View Geo-Localization under Noisy Correspondence</title>
+    <summary>  Cross-view geo-localization is a critical task for UAV navigation, event
+detection, and aerial surveying, as it enables matching between drone-captured
+and satellite imagery. Most existing approaches embed multi-modal data into a
+joint feature space to maximize the similarity of paired images. However, these
+methods typically assume perfect alignment of image pairs during training,
+which rarely holds true in real-world scenarios. In practice, factors such as
+urban canyon effects, electromagnetic interference, and adverse weather
+frequently induce GPS drift, resulting in systematic alignment shifts where
+only partial correspondences exist between pairs. Despite its prevalence, this
+source of noisy correspondence has received limited attention in current
+research. In this paper, we formally introduce and address the Noisy
+Correspondence on Cross-View Geo-Localization (NC-CVGL) problem, aiming to
+bridge the gap between idealized benchmarks and practical applications. To this
+end, we propose PAUL (Partition and Augmentation by Uncertainty Learning), a
+novel framework that partitions and augments training data based on estimated
+data uncertainty through uncertainty-aware co-augmentation and evidential
+co-training. Specifically, PAUL selectively augments regions with high
+correspondence confidence and utilizes uncertainty estimation to refine feature
+learning, effectively suppressing noise from misaligned pairs. Distinct from
+traditional filtering or label correction, PAUL leverages both data uncertainty
+and loss discrepancy for targeted partitioning and augmentation, thus providing
+robust supervision for noisy samples. Comprehensive experiments validate the
+effectiveness of individual components in PAUL,which consistently achieves
+superior performance over other competitive noisy-correspondence-driven methods
+in various noise ratios.
+</summary>
+    <author>
+      <name>Zheng Li</name>
+    </author>
+    <author>
+      <name>Yanming Guo</name>
+    </author>
+    <author>
+      <name>WenZhe Liu</name>
+    </author>
+    <author>
+      <name>Xueyi Zhang</name>
+    </author>
+    <author>
+      <name>Zhaoyun Ding</name>
+    </author>
+    <author>
+      <name>Long Xu</name>
+    </author>
+    <author>
+      <name>Mingrui Lao</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20066v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20066v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20064v1</id>
+    <updated>2025-08-27T17:18:30Z</updated>
+    <published>2025-08-27T17:18:30Z</published>
+    <title>Patch Progression Masked Autoencoder with Fusion CNN Network for
+  Classifying Evolution Between Two Pairs of 2D OCT Slices</title>
+    <summary>  Age-related Macular Degeneration (AMD) is a prevalent eye condition affecting
+visual acuity. Anti-vascular endothelial growth factor (anti-VEGF) treatments
+have been effective in slowing the progression of neovascular AMD, with better
+outcomes achieved through timely diagnosis and consistent monitoring. Tracking
+the progression of neovascular activity in OCT scans of patients with exudative
+AMD allows for the development of more personalized and effective treatment
+plans. This was the focus of the Monitoring Age-related Macular Degeneration
+Progression in Optical Coherence Tomography (MARIO) challenge, in which we
+participated. In Task 1, which involved classifying the evolution between two
+pairs of 2D slices from consecutive OCT acquisitions, we employed a fusion CNN
+network with model ensembling to further enhance the model's performance. For
+Task 2, which focused on predicting progression over the next three months
+based on current exam data, we proposed the Patch Progression Masked
+Autoencoder that generates an OCT for the next exam and then classifies the
+evolution between the current OCT and the one generated using our solution from
+Task 1. The results we achieved allowed us to place in the Top 10 for both
+tasks. Some team members are part of the same organization as the challenge
+organizers; therefore, we are not eligible to compete for the prize.
+</summary>
+    <author>
+      <name>Philippe Zhang</name>
+    </author>
+    <author>
+      <name>Weili Jiang</name>
+    </author>
+    <author>
+      <name>Yihao Li</name>
+    </author>
+    <author>
+      <name>Jing Zhang</name>
+    </author>
+    <author>
+      <name>Sarah Matta</name>
+    </author>
+    <author>
+      <name>Yubo Tan</name>
+    </author>
+    <author>
+      <name>Hui Lin</name>
+    </author>
+    <author>
+      <name>Haoshen Wang</name>
+    </author>
+    <author>
+      <name>Jiangtian Pan</name>
+    </author>
+    <author>
+      <name>Hui Xu</name>
+    </author>
+    <author>
+      <name>Laurent Borderie</name>
+    </author>
+    <author>
+      <name>Alexandre Le Guilcher</name>
+    </author>
+    <author>
+      <name>Béatrice Cochener</name>
+    </author>
+    <author>
+      <name>Chubin Ou</name>
+    </author>
+    <author>
+      <name>Gwenolé Quellec</name>
+    </author>
+    <author>
+      <name>Mathieu Lamard</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1007/978-3-031-86651-7_9</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1007/978-3-031-86651-7_9" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages, 5 figures, 3 tables, challenge/conference paper</arxiv:comment>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">Lect. Notes Comput. Sci. 15503, 97-105 (2025)</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2508.20064v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20064v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20063v1</id>
+    <updated>2025-08-27T17:17:00Z</updated>
+    <published>2025-08-27T17:17:00Z</published>
+    <title>OpenM3D: Open Vocabulary Multi-view Indoor 3D Object Detection without
+  Human Annotations</title>
+    <summary>  Open-vocabulary (OV) 3D object detection is an emerging field, yet its
+exploration through image-based methods remains limited compared to 3D point
+cloud-based methods. We introduce OpenM3D, a novel open-vocabulary multi-view
+indoor 3D object detector trained without human annotations. In particular,
+OpenM3D is a single-stage detector adapting the 2D-induced voxel features from
+the ImGeoNet model. To support OV, it is jointly trained with a class-agnostic
+3D localization loss requiring high-quality 3D pseudo boxes and a
+voxel-semantic alignment loss requiring diverse pre-trained CLIP features. We
+follow the training setting of OV-3DET where posed RGB-D images are given but
+no human annotations of 3D boxes or classes are available. We propose a 3D
+Pseudo Box Generation method using a graph embedding technique that combines 2D
+segments into coherent 3D structures. Our pseudo-boxes achieve higher precision
+and recall than other methods, including the method proposed in OV-3DET. We
+further sample diverse CLIP features from 2D segments associated with each
+coherent 3D structure to align with the corresponding voxel feature. The key to
+training a highly accurate single-stage detector requires both losses to be
+learned toward high-quality targets. At inference, OpenM3D, a highly efficient
+detector, requires only multi-view images for input and demonstrates superior
+accuracy and speed (0.3 sec. per scene) on ScanNet200 and ARKitScenes indoor
+benchmarks compared to existing methods. We outperform a strong two-stage
+method that leverages our class-agnostic detector with a ViT CLIP-based OV
+classifier and a baseline incorporating multi-view depth estimator on both
+accuracy and speed.
+</summary>
+    <author>
+      <name>Peng-Hao Hsu</name>
+    </author>
+    <author>
+      <name>Ke Zhang</name>
+    </author>
+    <author>
+      <name>Fu-En Wang</name>
+    </author>
+    <author>
+      <name>Tao Tu</name>
+    </author>
+    <author>
+      <name>Ming-Feng Li</name>
+    </author>
+    <author>
+      <name>Yu-Lun Liu</name>
+    </author>
+    <author>
+      <name>Albert Y. C. Chen</name>
+    </author>
+    <author>
+      <name>Min Sun</name>
+    </author>
+    <author>
+      <name>Cheng-Hao Kuo</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">ICCV2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20063v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20063v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20059v1</id>
+    <updated>2025-08-27T17:13:29Z</updated>
+    <published>2025-08-27T17:13:29Z</published>
+    <title>Moment Constrained Optimal Transport for Thermostatically Controlled
+  Loads</title>
+    <summary>  Controlling large populations of thermostatically controlled loads (TCLs),
+such as water heaters, poses significant challenges due to the need to balance
+global constraints (e.g., grid stability) with individual requirements (e.g.,
+physical limits and quality of service). In this work, we introduce a novel
+framework based on Moment Constrained Optimal Transport (MCOT) for distributed
+control of TCLs. By formulating the control problem as an optimal transport
+problem with moment constraints, our approach integrates global consumption
+constraints and physical feasibility conditions into the control design. This
+problem with high (or infinite) dimensionality can be reduced to a much lower
+finite-dimensional problem. The structure of this problem allows for computing
+the gradient with Monte Carlo methods by generating trajectories of TCLs.
+Contrary to all previous work, in our MCOT framework, it is possible to choose
+the sampling law, which considerably speeds up the calculations. This algorithm
+mitigates the need for extensive state-space discretization and significantly
+reduces computational complexity compared to existing methods. Numerical
+experiments in a water heater case study demonstrate that our MCOT-based method
+effectively coordinates TCLs under various constraints. We further extend our
+approach to an online setting, illustrating its practical applicability on
+simulated data from the SMACH (Multi-agent Simulation of Human Activity in the
+Household) platform.
+</summary>
+    <author>
+      <name>Thomas Le Corre</name>
+    </author>
+    <author>
+      <name>Julien Cardinal</name>
+    </author>
+    <author>
+      <name>Ana Bušić</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.20059v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20059v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20056v1</id>
+    <updated>2025-08-27T17:13:18Z</updated>
+    <published>2025-08-27T17:13:18Z</published>
+    <title>Reinforcement Learning for Search Tree Size Minimization in Constraint
+  Programming: New Results on Scheduling Benchmarks</title>
+    <summary>  Failure-Directed Search (FDS) is a significant complete generic search
+algorithm used in Constraint Programming (CP) to efficiently explore the search
+space, proven particularly effective on scheduling problems. This paper
+analyzes FDS's properties, showing that minimizing the size of its search tree
+guided by ranked branching decisions is closely related to the Multi-armed
+bandit (MAB) problem. Building on this insight, MAB reinforcement learning
+algorithms are applied to FDS, extended with problem-specific refinements and
+parameter tuning, and evaluated on the two most fundamental scheduling
+problems, the Job Shop Scheduling Problem (JSSP) and Resource-Constrained
+Project Scheduling Problem (RCPSP). The resulting enhanced FDS, using the best
+extended MAB algorithm and configuration, performs 1.7 times faster on the JSSP
+and 2.1 times faster on the RCPSP benchmarks compared to the original
+implementation in a new solver called OptalCP, while also being 3.5 times
+faster on the JSSP and 2.1 times faster on the RCPSP benchmarks than the
+current state-of-the-art FDS algorithm in IBM CP Optimizer 22.1. Furthermore,
+using only a 900-second time limit per instance, the enhanced FDS improved the
+existing state-of-the-art lower bounds of 78 of 84 JSSP and 226 of 393 RCPSP
+standard open benchmark instances while also completely closing a few of them.
+</summary>
+    <author>
+      <name>Vilém Heinz</name>
+    </author>
+    <author>
+      <name>Petr Vilím</name>
+    </author>
+    <author>
+      <name>Zdeněk Hanzálek</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1016/j.cie.2025.111413</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1016/j.cie.2025.111413" rel="related"/>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">Computers &amp; Industrial Engineering, vol. 209, p. 111413, 2025</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2508.20056v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20056v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="90-08, 90B35, 90C59, 90C99, 68T20, 90C27" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20047v1</id>
+    <updated>2025-08-27T16:54:09Z</updated>
+    <published>2025-08-27T16:54:09Z</published>
+    <title>AraHealthQA 2025 Shared Task Description Paper</title>
+    <summary>  We introduce {AraHealthQA 2025}, the {Comprehensive Arabic Health Question
+Answering Shared Task}, held in conjunction with {ArabicNLP 2025} (co-located
+with EMNLP 2025). This shared task addresses the paucity of high-quality Arabic
+medical QA resources by offering two complementary tracks: {MentalQA}, focusing
+on Arabic mental health Q\&amp;A (e.g., anxiety, depression, stigma reduction), and
+{MedArabiQ}, covering broader medical domains such as internal medicine,
+pediatrics, and clinical decision making. Each track comprises multiple
+subtasks, evaluation datasets, and standardized metrics, facilitating fair
+benchmarking. The task was structured to promote modeling under realistic,
+multilingual, and culturally nuanced healthcare contexts. We outline the
+dataset creation, task design and evaluation framework, participation
+statistics, baseline systems, and summarize the overall outcomes. We conclude
+with reflections on the performance trends observed and prospects for future
+iterations in Arabic health QA.
+</summary>
+    <author>
+      <name>Hassan Alhuzali</name>
+    </author>
+    <author>
+      <name>Farah Shamout</name>
+    </author>
+    <author>
+      <name>Muhammad Abdul-Mageed</name>
+    </author>
+    <author>
+      <name>Chaimae Abouzahir</name>
+    </author>
+    <author>
+      <name>Mouath Abu-Daoud</name>
+    </author>
+    <author>
+      <name>Ashwag Alasmari</name>
+    </author>
+    <author>
+      <name>Walid Al-Eisawi</name>
+    </author>
+    <author>
+      <name>Renad Al-Monef</name>
+    </author>
+    <author>
+      <name>Ali Alqahtani</name>
+    </author>
+    <author>
+      <name>Lama Ayash</name>
+    </author>
+    <author>
+      <name>Nizar Habash</name>
+    </author>
+    <author>
+      <name>Leen Kharouf</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.20047v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20047v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20045v1</id>
+    <updated>2025-08-27T16:53:28Z</updated>
+    <published>2025-08-27T16:53:28Z</published>
+    <title>Nagumo-Type Characterization of Forward Invariance for Constrained
+  Systems</title>
+    <summary>  This paper proposes a Nagumo-type invariance condition for differential
+inclusions defined on closed constraint sets. More specifically, given a closed
+set to render forward invariant, the proposed condition restricts the system's
+dynamics, assumed to be locally Lipschitz, on the boundary of the set
+restricted to the interior of the constraint set. In particular, when the
+boundary of the set is entirely within the interior of the constraint set, the
+proposed condition reduces to the well-known Nagumo condition, known to be
+necessary and sufficient for forward invariance in this case. This being said,
+the proposed condition is only necessary in the general setting. As a result,
+we provide a set of additional assumptions relating the constrained system to
+the set to render forward invariant, and restricting to the geometry at the
+intersection between the two sets, so that the equivalence holds. The
+importance of the proposed assumptions is illustrated via examples.
+</summary>
+    <author>
+      <name>Olayo Reynaud</name>
+    </author>
+    <author>
+      <name>Mohamed Maghenem</name>
+    </author>
+    <author>
+      <name>Adnane Saoud</name>
+    </author>
+    <author>
+      <name>Sadek Belamfedel Alaoui</name>
+    </author>
+    <author>
+      <name>Ahmad Hably</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.20045v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20045v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20040v1</id>
+    <updated>2025-08-27T16:50:17Z</updated>
+    <published>2025-08-27T16:50:17Z</published>
+    <title>Model Science: getting serious about verification, explanation and
+  control of AI systems</title>
+    <summary>  The growing adoption of foundation models calls for a paradigm shift from
+Data Science to Model Science. Unlike data-centric approaches, Model Science
+places the trained model at the core of analysis, aiming to interact, verify,
+explain, and control its behavior across diverse operational contexts. This
+paper introduces a conceptual framework for a new discipline called Model
+Science, along with the proposal for its four key pillars: Verification, which
+requires strict, context-aware evaluation protocols; Explanation, which is
+understood as various approaches to explore of internal model operations;
+Control, which integrates alignment techniques to steer model behavior; and
+Interface, which develops interactive and visual explanation tools to improve
+human calibration and decision-making. The proposed framework aims to guide the
+development of credible, safe, and human-aligned AI systems.
+</summary>
+    <author>
+      <name>Przemyslaw Biecek</name>
+    </author>
+    <author>
+      <name>Wojciech Samek</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">8 pages</arxiv:comment>
+    <arxiv:journal_ref xmlns:arxiv="http://arxiv.org/schemas/atom">Frontiers in AI track at European Conference on Artificial
+  Intelligence (ECAI) 2025</arxiv:journal_ref>
+    <link href="http://arxiv.org/abs/2508.20040v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20040v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20039v1</id>
+    <updated>2025-08-27T16:46:53Z</updated>
+    <published>2025-08-27T16:46:53Z</published>
+    <title>Robust Paths: Geometry and Computation</title>
+    <summary>  Applying robust optimization often requires selecting an appropriate
+uncertainty set both in shape and size, a choice that directly affects the
+trade-off between average-case and worst-case performances. In practice, this
+calibration is usually done via trial-and-error: solving the robust
+optimization problem many times with different uncertainty set shapes and
+sizes, and examining their performance trade-off. This process is
+computationally expensive and ad hoc. In this work, we take a principled
+approach to study this issue for robust optimization problems with linear
+objective functions, convex feasible regions, and convex uncertainty sets. We
+introduce and study what we define as the robust path: a set of robust
+solutions obtained by varying the uncertainty set's parameters. Our central
+geometric insight is that a robust path can be characterized as a Bregman
+projection of a curve (whose geometry is defined by the uncertainty set) onto
+the feasible region. This leads to a surprising discovery that the robust path
+can be approximated via the trajectories of standard optimization algorithms,
+such as the proximal point method, of the deterministic counterpart problem. We
+give a sharp approximation error bound and show it depends on the geometry of
+the feasible region and the uncertainty set. We also illustrate two special
+cases where the approximation error is zero: the feasible region is
+polyhedrally monotone (e.g., a simplex feasible region under an ellipsoidal
+uncertainty set), or the feasible region and the uncertainty set follow a dual
+relationship. We demonstrate the practical impact of this approach in two
+settings: portfolio optimization and adversarial deep learning.
+</summary>
+    <author>
+      <name>Hao Hao</name>
+    </author>
+    <author>
+      <name>Peter Zhang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.20039v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20039v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20038v1</id>
+    <updated>2025-08-27T16:44:03Z</updated>
+    <published>2025-08-27T16:44:03Z</published>
+    <title>Forewarned is Forearmed: Pre-Synthesizing Jailbreak-like Instructions to
+  Enhance LLM Safety Guardrail to Potential Attacks</title>
+    <summary>  Despite advances in improving large language model(LLM) to refuse to answer
+malicious instructions, widely used LLMs remain vulnerable to jailbreak attacks
+where attackers generate instructions with distributions differing from safety
+alignment corpora. New attacks expose LLMs' inability to recognize unseen
+malicious instructions, highlighting a critical distributional mismatch between
+training data and real-world attacks that forces developers into reactive
+patching cycles. To tackle this challenge, we propose IMAGINE, a synthesis
+framework that leverages embedding space distribution analysis to generate
+jailbreak-like instructions. This approach effectively fills the distributional
+gap between authentic jailbreak patterns and safety alignment corpora. IMAGINE
+follows an iterative optimization process that dynamically evolves text
+generation distributions across iterations, thereby augmenting the coverage of
+safety alignment data distributions through synthesized data examples. Based on
+the safety-aligned corpus enhanced through IMAGINE, our framework demonstrates
+significant decreases in attack success rate on Qwen2.5, Llama3.1, and Llama3.2
+without compromising their utility.
+</summary>
+    <author>
+      <name>Sheng Liu</name>
+    </author>
+    <author>
+      <name>Qiang Sheng</name>
+    </author>
+    <author>
+      <name>Danding Wang</name>
+    </author>
+    <author>
+      <name>Yang Li</name>
+    </author>
+    <author>
+      <name>Guang Yang</name>
+    </author>
+    <author>
+      <name>Juan Cao</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">EMNLP 2025 findings</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20038v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20038v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20037v1</id>
+    <updated>2025-08-27T16:42:35Z</updated>
+    <published>2025-08-27T16:42:35Z</published>
+    <title>Visio-Verbal Teleimpedance Interface: Enabling Semi-Autonomous Control
+  of Physical Interaction via Eye Tracking and Speech</title>
+    <summary>  The paper presents a visio-verbal teleimpedance interface for commanding 3D
+stiffness ellipsoids to the remote robot with a combination of the operator's
+gaze and verbal interaction. The gaze is detected by an eye-tracker, allowing
+the system to understand the context in terms of what the operator is currently
+looking at in the scene. Along with verbal interaction, a Visual Language Model
+(VLM) processes this information, enabling the operator to communicate their
+intended action or provide corrections. Based on these inputs, the interface
+can then generate appropriate stiffness matrices for different physical
+interaction actions. To validate the proposed visio-verbal teleimpedance
+interface, we conducted a series of experiments on a setup including a Force
+Dimension Sigma.7 haptic device to control the motion of the remote Kuka LBR
+iiwa robotic arm. The human operator's gaze is tracked by Tobii Pro Glasses 2,
+while human verbal commands are processed by a VLM using GPT-4o. The first
+experiment explored the optimal prompt configuration for the interface. The
+second and third experiments demonstrated different functionalities of the
+interface on a slide-in-the-groove task.
+</summary>
+    <author>
+      <name>Henk H. A. Jekel</name>
+    </author>
+    <author>
+      <name>Alejandro Díaz Rosales</name>
+    </author>
+    <author>
+      <name>Luka Peternel</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.20037v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20037v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20036v1</id>
+    <updated>2025-08-27T16:41:01Z</updated>
+    <published>2025-08-27T16:41:01Z</published>
+    <title>Eigenvalue distribution of the Neural Tangent Kernel in the quadratic
+  scaling</title>
+    <summary>  We compute the asymptotic eigenvalue distribution of the neural tangent
+kernel of a two-layer neural network under a specific scaling of dimension.
+Namely, if $X\in\mathbb{R}^{n\times d}$ is an i.i.d random matrix,
+$W\in\mathbb{R}^{d\times p}$ is an i.i.d $\mathcal{N}(0,1)$ matrix and
+$D\in\mathbb{R}^{p\times p}$ is a diagonal matrix with i.i.d bounded entries,
+we consider the matrix
+  \[
+  \mathrm{NTK}
+  =
+  \frac{1}{d}XX^\top
+  \odot
+  \frac{1}{p}
+  \sigma'\left(
+  \frac{1}{\sqrt{d}}XW
+  \right)D^2
+  \sigma'\left(
+  \frac{1}{\sqrt{d}}XW
+  \right)^\top
+  \]
+  where $\sigma'$ is a pseudo-Lipschitz function applied entrywise and under
+the scaling $\frac{n}{dp}\to \gamma_1$ and $\frac{p}{d}\to \gamma_2$. We
+describe the asymptotic distribution as the free multiplicative convolution of
+the Marchenko--Pastur distribution with a deterministic distribution depending
+on $\sigma$ and $D$.
+</summary>
+    <author>
+      <name>Lucas Benigni</name>
+    </author>
+    <author>
+      <name>Elliot Paquette</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">42 pages, 8 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20036v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20036v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.PR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20033v1</id>
+    <updated>2025-08-27T16:36:34Z</updated>
+    <published>2025-08-27T16:36:34Z</published>
+    <title>DeepScholar-Bench: A Live Benchmark and Automated Evaluation for
+  Generative Research Synthesis</title>
+    <summary>  The ability to research and synthesize knowledge is central to human
+expertise and progress. An emerging class of systems promises these exciting
+capabilities through generative research synthesis, performing retrieval over
+the live web and synthesizing discovered sources into long-form, cited
+summaries. However, evaluating such systems remains an open challenge: existing
+question-answering benchmarks focus on short-form factual responses, while
+expert-curated datasets risk staleness and data contamination. Both fail to
+capture the complexity and evolving nature of real research synthesis tasks. In
+this work, we introduce DeepScholar-bench, a live benchmark and holistic,
+automated evaluation framework designed to evaluate generative research
+synthesis. DeepScholar-bench draws queries from recent, high-quality ArXiv
+papers and focuses on a real research synthesis task: generating the related
+work sections of a paper by retrieving, synthesizing, and citing prior
+research. Our evaluation framework holistically assesses performance across
+three key dimensions, knowledge synthesis, retrieval quality, and
+verifiability. We also develop DeepScholar-base, a reference pipeline
+implemented efficiently using the LOTUS API. Using the DeepScholar-bench
+framework, we perform a systematic evaluation of prior open-source systems,
+search AI's, OpenAI's DeepResearch, and DeepScholar-base. We find that
+DeepScholar-base establishes a strong baseline, attaining competitive or higher
+performance than each other method. We also find that DeepScholar-bench remains
+far from saturated, with no system exceeding a score of $19\%$ across all
+metrics. These results underscore the difficulty of DeepScholar-bench, as well
+as its importance for progress towards AI systems capable of generative
+research synthesis. We make our code available at
+https://github.com/guestrin-lab/deepscholar-bench.
+</summary>
+    <author>
+      <name>Liana Patel</name>
+    </author>
+    <author>
+      <name>Negar Arabzadeh</name>
+    </author>
+    <author>
+      <name>Harshit Gupta</name>
+    </author>
+    <author>
+      <name>Ankita Sundar</name>
+    </author>
+    <author>
+      <name>Ion Stoica</name>
+    </author>
+    <author>
+      <name>Matei Zaharia</name>
+    </author>
+    <author>
+      <name>Carlos Guestrin</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.20033v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20033v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20032v1</id>
+    <updated>2025-08-27T16:34:53Z</updated>
+    <published>2025-08-27T16:34:53Z</published>
+    <title>Pruning Strategies for Backdoor Defense in LLMs</title>
+    <summary>  Backdoor attacks are a significant threat to the performance and integrity of
+pre-trained language models. Although such models are routinely fine-tuned for
+downstream NLP tasks, recent work shows they remain vulnerable to backdoor
+attacks that survive vanilla fine-tuning. These attacks are difficult to defend
+because end users typically lack knowledge of the attack triggers. Such attacks
+consist of stealthy malicious triggers introduced through subtle syntactic or
+stylistic manipulations, which can bypass traditional detection and remain in
+the model, making post-hoc purification essential. In this study, we explore
+whether attention-head pruning can mitigate these threats without any knowledge
+of the trigger or access to a clean reference model. To this end, we design and
+implement six pruning-based strategies: (i) gradient-based pruning, (ii)
+layer-wise variance pruning, (iii) gradient-based pruning with structured L1/L2
+sparsification, (iv) randomized ensemble pruning, (v)
+reinforcement-learning-guided pruning, and (vi) Bayesian uncertainty pruning.
+Each method iteratively removes the least informative heads while monitoring
+validation accuracy to avoid over-pruning. Experimental evaluation shows that
+gradient-based pruning performs best while defending the syntactic triggers,
+whereas reinforcement learning and Bayesian pruning better withstand stylistic
+attacks.
+</summary>
+    <author>
+      <name>Santosh Chapagain</name>
+    </author>
+    <author>
+      <name>Shah Muhammad Hamdi</name>
+    </author>
+    <author>
+      <name>Soukaina Filali Boubrahimi</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1145/3746252.3760946</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1145/3746252.3760946" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted in CIKM '25: The 34th ACM International Conference on
+  Information and Knowledge Management Proceedings</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20032v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20032v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20030v1</id>
+    <updated>2025-08-27T16:33:51Z</updated>
+    <published>2025-08-27T16:33:51Z</published>
+    <title>Large Language Models (LLMs) for Electronic Design Automation (EDA)</title>
+    <summary>  With the growing complexity of modern integrated circuits, hardware engineers
+are required to devote more effort to the full design-to-manufacturing
+workflow. This workflow involves numerous iterations, making it both
+labor-intensive and error-prone. Therefore, there is an urgent demand for more
+efficient Electronic Design Automation (EDA) solutions to accelerate hardware
+development. Recently, large language models (LLMs) have shown remarkable
+advancements in contextual comprehension, logical reasoning, and generative
+capabilities. Since hardware designs and intermediate scripts can be
+represented as text, integrating LLM for EDA offers a promising opportunity to
+simplify and even automate the entire workflow. Accordingly, this paper
+provides a comprehensive overview of incorporating LLMs into EDA, with emphasis
+on their capabilities, limitations, and future opportunities. Three case
+studies, along with their outlook, are introduced to demonstrate the
+capabilities of LLMs in hardware design, testing, and optimization. Finally,
+future directions and challenges are highlighted to further explore the
+potential of LLMs in shaping the next-generation EDA, providing valuable
+insights for researchers interested in leveraging advanced AI technologies for
+EDA.
+</summary>
+    <author>
+      <name>Kangwei Xu</name>
+    </author>
+    <author>
+      <name>Denis Schwachhofer</name>
+    </author>
+    <author>
+      <name>Jason Blocklove</name>
+    </author>
+    <author>
+      <name>Ilia Polian</name>
+    </author>
+    <author>
+      <name>Peter Domanski</name>
+    </author>
+    <author>
+      <name>Dirk Pflüger</name>
+    </author>
+    <author>
+      <name>Siddharth Garg</name>
+    </author>
+    <author>
+      <name>Ramesh Karri</name>
+    </author>
+    <author>
+      <name>Ozgur Sinanoglu</name>
+    </author>
+    <author>
+      <name>Johann Knechtel</name>
+    </author>
+    <author>
+      <name>Zhuorui Zhao</name>
+    </author>
+    <author>
+      <name>Ulf Schlichtmann</name>
+    </author>
+    <author>
+      <name>Bing Li</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted by IEEE International System-on-Chip Conference</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20030v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20030v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SY" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20029v1</id>
+    <updated>2025-08-27T16:33:32Z</updated>
+    <published>2025-08-27T16:33:32Z</published>
+    <title>Segmentation Assisted Incremental Test Time Adaptation in an Open World</title>
+    <summary>  In dynamic environments, unfamiliar objects and distribution shifts are often
+encountered, which challenge the generalization abilities of the deployed
+trained models. This work addresses Incremental Test Time Adaptation of Vision
+Language Models, tackling scenarios where unseen classes and unseen domains
+continuously appear during testing. Unlike traditional Test Time Adaptation
+approaches, where the test stream comes only from a predefined set of classes,
+our framework allows models to adapt simultaneously to both covariate and label
+shifts, actively incorporating new classes as they emerge. Towards this goal,
+we establish a new benchmark for ITTA, integrating single image TTA methods for
+VLMs with active labeling techniques that query an oracle for samples
+potentially representing unseen classes during test time. We propose a
+segmentation assisted active labeling module, termed SegAssist, which is
+training free and repurposes the segmentation capabilities of VLMs to refine
+active sample selection, prioritizing samples likely to belong to unseen
+classes. Extensive experiments on several benchmark datasets demonstrate the
+potential of SegAssist to enhance the performance of VLMs in real world
+scenarios, where continuous adaptation to emerging data is essential.
+Project-page:https://manogna-s.github.io/segassist/
+</summary>
+    <author>
+      <name>Manogna Sreenivas</name>
+    </author>
+    <author>
+      <name>Soma Biswas</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted at BMVC 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20029v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20029v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20024v1</id>
+    <updated>2025-08-27T16:31:21Z</updated>
+    <published>2025-08-27T16:31:21Z</published>
+    <title>Using item recommendations and LLMs in marketing email titles</title>
+    <summary>  E-commerce marketplaces make use of a number of marketing channels like
+emails, push notifications, etc. to reach their users and stimulate purchases.
+Personalized emails especially are a popular touch point for marketers to
+inform users of latest items in stock, especially for those who stopped
+visiting the marketplace. Such emails contain personalized recommendations
+tailored to each user's interests, enticing users to buy relevant items. A
+common limitation of these emails is that the primary entry point, the title of
+the email, tends to follow fixed templates, failing to inspire enough interest
+in the contents. In this work, we explore the potential of large language
+models (LLMs) for generating thematic titles that reflect the personalized
+content of the emails. We perform offline simulations and conduct online
+experiments on the order of millions of users, finding our techniques useful in
+improving the engagement between customers and our emails. We highlight key
+findings and learnings as we productionize the safe and automated generation of
+email titles for millions of users.
+</summary>
+    <author>
+      <name>Deddy Jobson</name>
+    </author>
+    <author>
+      <name>Muktti Shukla</name>
+    </author>
+    <author>
+      <name>Phuong Dinh</name>
+    </author>
+    <author>
+      <name>Julio Christian Young</name>
+    </author>
+    <author>
+      <name>Nick Pitton</name>
+    </author>
+    <author>
+      <name>Nina Chen</name>
+    </author>
+    <author>
+      <name>Ryan Ginstrom</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to The Second Workshop on Generative AI for E-commerce
+  (GenAIECommerce '25), held September 22, 2025, in Prague, Czech Republic. 3
+  figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20024v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20024v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20021v1</id>
+    <updated>2025-08-27T16:30:30Z</updated>
+    <published>2025-08-27T16:30:30Z</published>
+    <title>FairLoop: Software Support for Human-Centric Fairness in Predictive
+  Business Process Monitoring</title>
+    <summary>  Sensitive attributes like gender or age can lead to unfair predictions in
+machine learning tasks such as predictive business process monitoring,
+particularly when used without considering context. We present FairLoop1, a
+tool for human-guided bias mitigation in neural network-based prediction
+models. FairLoop distills decision trees from neural networks, allowing users
+to inspect and modify unfair decision logic, which is then used to fine-tune
+the original model towards fairer predictions. Compared to other approaches to
+fairness, FairLoop enables context-aware bias removal through human
+involvement, addressing the influence of sensitive attributes selectively
+rather than excluding them uniformly.
+</summary>
+    <author>
+      <name>Felix Möhrlein</name>
+    </author>
+    <author>
+      <name>Martin Käppel</name>
+    </author>
+    <author>
+      <name>Julian Neuberger</name>
+    </author>
+    <author>
+      <name>Sven Weinzierl</name>
+    </author>
+    <author>
+      <name>Lars Ackermann</name>
+    </author>
+    <author>
+      <name>Martin Matzner</name>
+    </author>
+    <author>
+      <name>Stefan Jablonski</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Proceedings of the Best BPM Dissertation Award, Doctoral Consortium,
+  and Demonstrations &amp; Resources Forum co-located with 23rd International
+  Conference on Business Process Management (BPM 2025), Seville, Spain, August
+  31st to September 5th, 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20021v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20021v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20020v1</id>
+    <updated>2025-08-27T16:28:15Z</updated>
+    <published>2025-08-27T16:28:15Z</published>
+    <title>GS: Generative Segmentation via Label Diffusion</title>
+    <summary>  Language-driven image segmentation is a fundamental task in vision-language
+understanding, requiring models to segment regions of an image corresponding to
+natural language expressions. Traditional methods approach this as a
+discriminative problem, assigning each pixel to foreground or background based
+on semantic alignment. Recently, diffusion models have been introduced to this
+domain, but existing approaches remain image-centric: they either (i) use image
+diffusion models as visual feature extractors, (ii) synthesize segmentation
+data via image generation to train discriminative models, or (iii) perform
+diffusion inversion to extract attention cues from pre-trained image diffusion
+models-thereby treating segmentation as an auxiliary process. In this paper, we
+propose GS (Generative Segmentation), a novel framework that formulates
+segmentation itself as a generative task via label diffusion. Instead of
+generating images conditioned on label maps and text, GS reverses the
+generative process: it directly generates segmentation masks from noise,
+conditioned on both the input image and the accompanying language description.
+This paradigm makes label generation the primary modeling target, enabling
+end-to-end training with explicit control over spatial and semantic fidelity.
+To demonstrate the effectiveness of our approach, we evaluate GS on Panoptic
+Narrative Grounding (PNG), a representative and challenging benchmark for
+multimodal segmentation that requires panoptic-level reasoning guided by
+narrative captions. Experimental results show that GS significantly outperforms
+existing discriminative and diffusion-based methods, setting a new
+state-of-the-art for language-driven segmentation.
+</summary>
+    <author>
+      <name>Yuhao Chen</name>
+    </author>
+    <author>
+      <name>Shubin Chen</name>
+    </author>
+    <author>
+      <name>Liang Lin</name>
+    </author>
+    <author>
+      <name>Guangrun Wang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">12 pages, 7 figures, 5 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20020v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20020v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20019v1</id>
+    <updated>2025-08-27T16:27:57Z</updated>
+    <published>2025-08-27T16:27:57Z</published>
+    <title>Symphony: A Decentralized Multi-Agent Framework for Scalable Collective
+  Intelligence</title>
+    <summary>  Most existing Large Language Model (LLM)-based agent frameworks rely on
+centralized orchestration, incurring high deployment costs, rigid communication
+topologies, and limited adaptability. To address these challenges, we introduce
+Symphony, a decentralized multi-agent system which enables lightweight LLMs on
+consumer-grade GPUs to coordinate. Symphony introduces three key mechanisms:
+(1) a decentralized ledger that records capabilities, (2) a Beacon-selection
+protocol for dynamic task allocation, and (3) weighted result voting based on
+CoTs. This design forms a privacy-saving, scalable, and fault-tolerant
+orchestration with low overhead. Empirically, Symphony outperforms existing
+baselines on reasoning benchmarks, achieving substantial accuracy gains and
+demonstrating robustness across models of varying capacities.
+</summary>
+    <author>
+      <name>Ji Wang</name>
+    </author>
+    <author>
+      <name>Kashing Chen</name>
+    </author>
+    <author>
+      <name>Xinyuan Song</name>
+    </author>
+    <author>
+      <name>Ke Zhang</name>
+    </author>
+    <author>
+      <name>Lynn Ai</name>
+    </author>
+    <author>
+      <name>Eric Yang</name>
+    </author>
+    <author>
+      <name>Bill Shi</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.20019v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20019v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20018v1</id>
+    <updated>2025-08-27T16:27:19Z</updated>
+    <published>2025-08-27T16:27:19Z</published>
+    <title>SWIRL: A Staged Workflow for Interleaved Reinforcement Learning in
+  Mobile GUI Control</title>
+    <summary>  The rapid advancement of large vision language models (LVLMs) and agent
+systems has heightened interest in mobile GUI agents that can reliably
+translate natural language into interface operations. Existing single-agent
+approaches, however, remain limited by structural constraints. Although
+multi-agent systems naturally decouple different competencies, recent progress
+in multi-agent reinforcement learning (MARL) has often been hindered by
+inefficiency and remains incompatible with current LVLM architectures. To
+address these challenges, we introduce SWIRL, a staged workflow for interleaved
+reinforcement learning designed for multi-agent systems. SWIRL reformulates
+MARL into a sequence of single-agent reinforcement learning tasks, updating one
+agent at a time while keeping the others fixed. This formulation enables stable
+training and promotes efficient coordination across agents. Theoretically, we
+provide a stepwise safety bound, a cross-round monotonic improvement theorem,
+and convergence guarantees on return, ensuring robust and principled
+optimization. In application to mobile GUI control, SWIRL instantiates a
+Navigator that converts language and screen context into structured plans, and
+an Interactor that grounds these plans into executable atomic actions.
+Extensive experiments demonstrate superior performance on both high-level and
+low-level GUI benchmarks. Beyond GUI tasks, SWIRL also demonstrates strong
+capability in multi-agent mathematical reasoning, underscoring its potential as
+a general framework for developing efficient and robust multi-agent systems.
+</summary>
+    <author>
+      <name>Quanfeng Lu</name>
+    </author>
+    <author>
+      <name>Zhantao Ma</name>
+    </author>
+    <author>
+      <name>Shuai Zhong</name>
+    </author>
+    <author>
+      <name>Jin Wang</name>
+    </author>
+    <author>
+      <name>Dahai Yu</name>
+    </author>
+    <author>
+      <name>Michael K. Ng</name>
+    </author>
+    <author>
+      <name>Ping Luo</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">28 pages, 12 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20018v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20018v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20016v1</id>
+    <updated>2025-08-27T16:21:31Z</updated>
+    <published>2025-08-27T16:21:31Z</published>
+    <title>HPC Digital Twins for Evaluating Scheduling Policies, Incentive
+  Structures and their Impact on Power and Cooling</title>
+    <summary>  Schedulers are critical for optimal resource utilization in high-performance
+computing. Traditional methods to evaluate schedulers are limited to
+post-deployment analysis, or simulators, which do not model associated
+infrastructure. In this work, we present the first-of-its-kind integration of
+scheduling and digital twins in HPC. This enables what-if studies to understand
+the impact of parameter configurations and scheduling decisions on the physical
+assets, even before deployment, or regarching changes not easily realizable in
+production. We (1) provide the first digital twin framework extended with
+scheduling capabilities, (2) integrate various top-tier HPC systems given their
+publicly available datasets, (3) implement extensions to integrate external
+scheduling simulators. Finally, we show how to (4) implement and evaluate
+incentive structures, as-well-as (5) evaluate machine learning based
+scheduling, in such novel digital-twin based meta-framework to prototype
+scheduling. Our work enables what-if scenarios of HPC systems to evaluate
+sustainability, and the impact on the simulated system.
+</summary>
+    <author>
+      <name>Matthias Maiterth</name>
+    </author>
+    <author>
+      <name>Wesley H. Brewer</name>
+    </author>
+    <author>
+      <name>Jaya S. Kuruvella</name>
+    </author>
+    <author>
+      <name>Arunavo Dey</name>
+    </author>
+    <author>
+      <name>Tanzima Z. Islam</name>
+    </author>
+    <author>
+      <name>Kevin Menear</name>
+    </author>
+    <author>
+      <name>Dmitry Duplyakin</name>
+    </author>
+    <author>
+      <name>Rashadul Kabir</name>
+    </author>
+    <author>
+      <name>Tapasya Patki</name>
+    </author>
+    <author>
+      <name>Terry Jones</name>
+    </author>
+    <author>
+      <name>Feiyi Wang</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.20016v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20016v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20015v1</id>
+    <updated>2025-08-27T16:19:49Z</updated>
+    <published>2025-08-27T16:19:49Z</published>
+    <title>Decomposing Behavioral Phase Transitions in LLMs: Order Parameters for
+  Emergent Misalignment</title>
+    <summary>  Fine-tuning LLMs on narrowly harmful datasets can lead to behavior that is
+broadly misaligned with respect to human values. To understand when and how
+this emergent misalignment occurs, we develop a comprehensive framework for
+detecting and characterizing rapid transitions during fine-tuning using both
+distributional change detection methods as well as order parameters that are
+formulated in plain English and evaluated by an LLM judge. Using an objective
+statistical dissimilarity measure, we quantify how the phase transition that
+occurs during fine-tuning affects multiple aspects of the model. In particular,
+we assess what percentage of the total distributional change in model outputs
+is captured by different aspects, such as alignment or verbosity, providing a
+decomposition of the overall transition. We also find that the actual
+behavioral transition occurs later in training than indicated by the peak in
+the gradient norm alone. Our framework enables the automated discovery and
+quantification of language-based order parameters, which we demonstrate on
+examples ranging from knowledge questions to politics and ethics.
+</summary>
+    <author>
+      <name>Julian Arnold</name>
+    </author>
+    <author>
+      <name>Niels Lörch</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">11+25 pages, 4+11 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20015v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20015v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20014v1</id>
+    <updated>2025-08-27T16:16:47Z</updated>
+    <published>2025-08-27T16:16:47Z</published>
+    <title>CataractSurg-80K: Knowledge-Driven Benchmarking for Structured Reasoning
+  in Ophthalmic Surgery Planning</title>
+    <summary>  Cataract surgery remains one of the most widely performed and effective
+procedures for vision restoration. Effective surgical planning requires
+integrating diverse clinical examinations for patient assessment, intraocular
+lens (IOL) selection, and risk evaluation. Large language models (LLMs) have
+shown promise in supporting clinical decision-making. However, existing LLMs
+often lack the domain-specific expertise to interpret heterogeneous ophthalmic
+data and provide actionable surgical plans. To enhance the model's ability to
+interpret heterogeneous ophthalmic reports, we propose a knowledge-driven
+Multi-Agent System (MAS), where each agent simulates the reasoning process of
+specialist ophthalmologists, converting raw clinical inputs into structured,
+actionable summaries in both training and deployment stages. Building on MAS,
+we introduce CataractSurg-80K, the first large-scale benchmark for cataract
+surgery planning that incorporates structured clinical reasoning. Each case is
+annotated with diagnostic questions, expert reasoning chains, and structured
+surgical recommendations. We further introduce Qwen-CSP, a domain-specialized
+model built on Qwen-4B, fine-tuned through a multi-stage process tailored for
+surgical planning. Comprehensive experiments show that Qwen-CSP outperforms
+strong general-purpose LLMs across multiple metrics. Our work delivers a
+high-quality dataset, a rigorous benchmark, and a domain-adapted LLM to
+facilitate future research in medical AI reasoning and decision support.
+</summary>
+    <author>
+      <name>Yang Meng</name>
+    </author>
+    <author>
+      <name>Zewen Pan</name>
+    </author>
+    <author>
+      <name>Yandi Lu</name>
+    </author>
+    <author>
+      <name>Ruobing Huang</name>
+    </author>
+    <author>
+      <name>Yanfeng Liao</name>
+    </author>
+    <author>
+      <name>Jiarui Yang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">18 pages, 9 figures</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20014v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20014v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.20013v1</id>
+    <updated>2025-08-27T16:16:12Z</updated>
+    <published>2025-08-27T16:16:12Z</published>
+    <title>Cross-Platform E-Commerce Product Categorization and Recategorization: A
+  Multimodal Hierarchical Classification Approach</title>
+    <summary>  This study addresses critical industrial challenges in e-commerce product
+categorization, namely platform heterogeneity and the structural limitations of
+existing taxonomies, by developing and deploying a multimodal hierarchical
+classification framework. Using a dataset of 271,700 products from 40
+international fashion e-commerce platforms, we integrate textual features
+(RoBERTa), visual features (ViT), and joint vision--language representations
+(CLIP). We investigate fusion strategies, including early, late, and
+attention-based fusion within a hierarchical architecture enhanced by dynamic
+masking to ensure taxonomic consistency. Results show that CLIP embeddings
+combined via an MLP-based late-fusion strategy achieve the highest hierarchical
+F1 (98.59\%), outperforming unimodal baselines. To address shallow or
+inconsistent categories, we further introduce a self-supervised ``product
+recategorization'' pipeline using SimCLR, UMAP, and cascade clustering, which
+discovered new, fine-grained categories (e.g., subtypes of ``Shoes'') with
+cluster purities above 86\%. Cross-platform experiments reveal a
+deployment-relevant trade-off: complex late-fusion methods maximize accuracy
+with diverse training data, while simpler early-fusion methods generalize more
+effectively to unseen platforms. Finally, we demonstrate the framework's
+industrial scalability through deployment in EURWEB's commercial transaction
+intelligence platform via a two-stage inference pipeline, combining a
+lightweight RoBERTa stage with a GPU--accelerated multimodal stage to balance
+cost and accuracy.
+</summary>
+    <author>
+      <name>Lotte Gross</name>
+    </author>
+    <author>
+      <name>Rebecca Walter</name>
+    </author>
+    <author>
+      <name>Nicole Zoppi</name>
+    </author>
+    <author>
+      <name>Adrien Justus</name>
+    </author>
+    <author>
+      <name>Alessandro Gambetti</name>
+    </author>
+    <author>
+      <name>Qiwei Han</name>
+    </author>
+    <author>
+      <name>Maximilian Kaiser</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">10 pages, 5 figures, 3 tables</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.20013v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.20013v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19999v1</id>
+    <updated>2025-08-27T15:59:47Z</updated>
+    <published>2025-08-27T15:59:47Z</published>
+    <title>Linear-Time Demonstration Selection for In-Context Learning via Gradient
+  Estimation</title>
+    <summary>  This paper introduces an algorithm to select demonstration examples for
+in-context learning of a query set. Given a set of $n$ examples, how can we
+quickly select $k$ out of $n$ to best serve as the conditioning for downstream
+inference? This problem has broad applications in prompt tuning and
+chain-of-thought reasoning. Since model weights remain fixed during in-context
+learning, previous work has sought to design methods based on the similarity of
+token embeddings. This work proposes a new approach based on gradients of the
+output taken in the input embedding space. Our approach estimates model outputs
+through a first-order approximation using the gradients. Then, we apply this
+estimation to multiple randomly sampled subsets. Finally, we aggregate the
+sampled subset outcomes to form an influence score for each demonstration, and
+select $k$ most relevant examples. This procedure only requires pre-computing
+model outputs and gradients once, resulting in a linear-time algorithm relative
+to model and training set sizes. Extensive experiments across various models
+and datasets validate the efficiency of our approach. We show that the gradient
+estimation procedure yields approximations of full inference with less than
+$\mathbf{1}\%$ error across six datasets. This allows us to scale up subset
+selection that would otherwise run full inference by up to
+$\mathbf{37.7}\times$ on models with up to $34$ billion parameters, and
+outperform existing selection methods based on input embeddings by
+$\mathbf{11}\%$ on average.
+</summary>
+    <author>
+      <name>Ziniu Zhang</name>
+    </author>
+    <author>
+      <name>Zhenshuo Zhang</name>
+    </author>
+    <author>
+      <name>Dongyue Li</name>
+    </author>
+    <author>
+      <name>Lu Wang</name>
+    </author>
+    <author>
+      <name>Jennifer Dy</name>
+    </author>
+    <author>
+      <name>Hongyang R. Zhang</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">19 pages. To appear in EMNLP'25</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.19999v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.19999v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19997v1</id>
+    <updated>2025-08-27T15:56:34Z</updated>
+    <published>2025-08-27T15:56:34Z</published>
+    <title>Selective Retrieval-Augmentation for Long-Tail Legal Text Classification</title>
+    <summary>  Legal text classification is a fundamental NLP task in the legal domain.
+Benchmark datasets in this area often exhibit a long-tail label distribution,
+where many labels are underrepresented, leading to poor model performance on
+rare classes. This paper proposes Selective Retrieval-Augmentation (SRA) as a
+solution to this problem. SRA focuses on augmenting samples belonging to
+low-frequency labels in the training set, preventing the introduction of noise
+for well-represented classes, and requires no changes to the model
+architecture. Retrieval is performed only from the training data to ensure
+there is no potential information leakage, removing the need for external
+corpora simultaneously. The proposed SRA method is tested on two legal text
+classification benchmark datasets with long-tail distributions: LEDGAR
+(single-label) and UNFAIR-ToS (multi-label). The results indicate that SRA
+attains higher micro-F1 and macro-F1 scores compared to all current LexGLUE
+baselines across both datasets, illustrating consistent improvements in
+long-tail legal text classification. The code repository is available at:
+https://github.com/Boheng-Mao/sra-legal
+</summary>
+    <author>
+      <name>Boheng Mao</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.19997v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.19997v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19996v1</id>
+    <updated>2025-08-27T15:54:01Z</updated>
+    <published>2025-08-27T15:54:01Z</published>
+    <title>ReSURE: Regularizing Supervision Unreliability for Multi-turn Dialogue
+  Fine-tuning</title>
+    <summary>  Fine-tuning multi-turn dialogue systems requires high-quality supervision but
+often suffers from degraded performance when exposed to low-quality data.
+Supervision errors in early turns can propagate across subsequent turns,
+undermining coherence and response quality. Existing methods typically address
+data quality via static prefiltering, which decouples quality control from
+training and fails to mitigate turn-level error propagation. In this context,
+we propose ReSURE (Regularizing Supervision UnREliability), an adaptive
+learning method that dynamically down-weights unreliable supervision without
+explicit filtering. ReSURE estimates per-turn loss distributions using
+Welford's online statistics and reweights sample losses on the fly accordingly.
+Experiments on both single-source and mixed-quality datasets show improved
+stability and response quality. Notably, ReSURE enjoys positive Spearman
+correlations (0.21 ~ 1.0 across multiple benchmarks) between response scores
+and number of samples regardless of data quality, which potentially paves the
+way for utilizing large-scale data effectively. Code is publicly available at
+https://github.com/Elvin-Yiming-Du/ReSURE_Multi_Turn_Training.
+</summary>
+    <author>
+      <name>Yiming Du</name>
+    </author>
+    <author>
+      <name>Yifan Xiang</name>
+    </author>
+    <author>
+      <name>Bin Liang</name>
+    </author>
+    <author>
+      <name>Dahua Lin</name>
+    </author>
+    <author>
+      <name>Kam-Fai Wong</name>
+    </author>
+    <author>
+      <name>Fei Tan</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.19996v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.19996v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19994v1</id>
+    <updated>2025-08-27T15:51:30Z</updated>
+    <published>2025-08-27T15:51:30Z</published>
+    <title>The Coherent Multiplex: Scalable Real-Time Wavelet Coherence
+  Architecture</title>
+    <summary>  The Coherent Multiplex is formalized and validated as a scalable, real-time
+system for identifying, analyzing, and visualizing coherence among multiple
+time series. Its architecture comprises a fast spectral similarity layer based
+on cosine similarity metrics of Fourier-transformed signals, and a sparse
+time-frequency layer for wavelet coherence. The system constructs and evolves a
+multilayer graph representing inter-signal relationships, enabling low-latency
+inference and monitoring. A simulation prototype demonstrates functionality
+across 8 synthetic channels with a high similarity threshold for further
+computation, with additional opportunities for scaling the architecture up to
+support thousands of input signals with constrained hardware. Applications
+discussed include neuroscience, finance, and biomedical signal analysis.
+</summary>
+    <author>
+      <name>Noah Shore</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Submitted to International Symposium for Signal Processing 2025</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.19994v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.19994v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-fin.MF" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19993v1</id>
+    <updated>2025-08-27T15:50:43Z</updated>
+    <published>2025-08-27T15:50:43Z</published>
+    <title>MathBuddy: A Multimodal System for Affective Math Tutoring</title>
+    <summary>  The rapid adoption of LLM-based conversational systems is already
+transforming the landscape of educational technology. However, the current
+state-of-the-art learning models do not take into account the student's
+affective states. Multiple studies in educational psychology support the claim
+that positive or negative emotional states can impact a student's learning
+capabilities. To bridge this gap, we present MathBuddy, an emotionally aware
+LLM-powered Math Tutor, which dynamically models the student's emotions and
+maps them to relevant pedagogical strategies, making the tutor-student
+conversation a more empathetic one. The student's emotions are captured from
+the conversational text as well as from their facial expressions. The student's
+emotions are aggregated from both modalities to confidently prompt our LLM
+Tutor for an emotionally-aware response. We have effectively evaluated our
+model using automatic evaluation metrics across eight pedagogical dimensions
+and user studies. We report a massive 23 point performance gain using the win
+rate and a 3 point gain at an overall level using DAMR scores which strongly
+supports our hypothesis of improving LLM-based tutor's pedagogical abilities by
+modeling students' emotions.
+</summary>
+    <author>
+      <name>Debanjana Kar</name>
+    </author>
+    <author>
+      <name>Leopold Böss</name>
+    </author>
+    <author>
+      <name>Dacia Braca</name>
+    </author>
+    <author>
+      <name>Sebastian Maximilian Dennerlein</name>
+    </author>
+    <author>
+      <name>Nina Christine Hubig</name>
+    </author>
+    <author>
+      <name>Philipp Wintersberger</name>
+    </author>
+    <author>
+      <name>Yufang Hou</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.19993v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.19993v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19990v1</id>
+    <updated>2025-08-27T15:48:50Z</updated>
+    <published>2025-08-27T15:48:50Z</published>
+    <title>Self-Supervised Pre-Training with Equilibrium Constraints</title>
+    <summary>  Self-supervised pre-training using unlabeled data is widely used in machine
+learning. In this paper, we propose a new self-supervised pre-training approach
+to dealing with heterogeneous data. Instead of mixing all the data and
+minimizing the averaged global loss in the conventional way, we impose
+additional equilibrium constraints to ensure that the models optimizes each
+source of heterogeneous data to its local optima after $K$-step gradient
+descent initialized from the model. We formulate this as a bilevel optimization
+problem, and use the first-order approximation method to solve the problem. We
+discuss its connection to model-agnostic meta learning (MAML). Experiments are
+carried out on self-supervised pre-training using multi-domain and multilingual
+datasets, demonstrating that the proposed approach can significantly improve
+the adaptivity of the self-supervised pre-trained model for the downstream
+supervised fine-tuning tasks.
+</summary>
+    <author>
+      <name>Xiaodong Cui</name>
+    </author>
+    <author>
+      <name>A F M Saif</name>
+    </author>
+    <author>
+      <name>Brian Kingsbury</name>
+    </author>
+    <author>
+      <name>Tianyi Chen</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.19990v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.19990v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19988v1</id>
+    <updated>2025-08-27T15:47:19Z</updated>
+    <published>2025-08-27T15:47:19Z</published>
+    <title>AgentCoMa: A Compositional Benchmark Mixing Commonsense and Mathematical
+  Reasoning in Real-World Scenarios</title>
+    <summary>  Large Language Models (LLMs) have achieved high accuracy on complex
+commonsense and mathematical problems that involve the composition of multiple
+reasoning steps. However, current compositional benchmarks testing these skills
+tend to focus on either commonsense or math reasoning, whereas LLM agents
+solving real-world tasks would require a combination of both. In this work, we
+introduce an Agentic Commonsense and Math benchmark (AgentCoMa), where each
+compositional task requires a commonsense reasoning step and a math reasoning
+step. We test it on 61 LLMs of different sizes, model families, and training
+strategies. We find that LLMs can usually solve both steps in isolation, yet
+their accuracy drops by ~30% on average when the two are combined. This is a
+substantially greater performance gap than the one we observe in prior
+compositional benchmarks that combine multiple steps of the same reasoning
+type. In contrast, non-expert human annotators can solve the compositional
+questions and the individual steps in AgentCoMa with similarly high accuracy.
+Furthermore, we conduct a series of interpretability studies to better
+understand the performance gap, examining neuron patterns, attention maps and
+membership inference. Our work underscores a substantial degree of model
+brittleness in the context of mixed-type compositional reasoning and offers a
+test bed for future improvement.
+</summary>
+    <author>
+      <name>Lisa Alazraki</name>
+    </author>
+    <author>
+      <name>Lihu Chen</name>
+    </author>
+    <author>
+      <name>Ana Brassard</name>
+    </author>
+    <author>
+      <name>Joe Stacey</name>
+    </author>
+    <author>
+      <name>Hossein A. Rahmani</name>
+    </author>
+    <author>
+      <name>Marek Rei</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.19988v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.19988v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19982v1</id>
+    <updated>2025-08-27T15:40:25Z</updated>
+    <published>2025-08-27T15:40:25Z</published>
+    <title>Diffusion Language Models Know the Answer Before Decoding</title>
+    <summary>  Diffusion language models (DLMs) have recently emerged as an alternative to
+autoregressive approaches, offering parallel sequence generation and flexible
+token orders. However, their inference remains slower than that of
+autoregressive models, primarily due to the cost of bidirectional attention and
+the large number of refinement steps required for high quality outputs. In this
+work, we highlight and leverage an overlooked property of DLMs early answer
+convergence: in many cases, the correct answer can be internally identified by
+half steps before the final decoding step, both under semi-autoregressive and
+random remasking schedules. For example, on GSM8K and MMLU, up to 97% and 99%
+of instances, respectively, can be decoded correctly using only half of the
+refinement steps. Building on this observation, we introduce Prophet, a
+training-free fast decoding paradigm that enables early commit decoding.
+Specifically, Prophet dynamically decides whether to continue refinement or to
+go "all-in" (i.e., decode all remaining tokens in one step), using the
+confidence gap between the top-2 prediction candidates as the criterion. It
+integrates seamlessly into existing DLM implementations, incurs negligible
+overhead, and requires no additional training. Empirical evaluations of
+LLaDA-8B and Dream-7B across multiple tasks show that Prophet reduces the
+number of decoding steps by up to 3.4x while preserving high generation
+quality. These results recast DLM decoding as a problem of when to stop
+sampling, and demonstrate that early decode convergence provides a simple yet
+powerful mechanism for accelerating DLM inference, complementary to existing
+speedup techniques. Our code is publicly available at
+https://github.com/pixeli99/Prophet.
+</summary>
+    <author>
+      <name>Pengxiang Li</name>
+    </author>
+    <author>
+      <name>Yefan Zhou</name>
+    </author>
+    <author>
+      <name>Dilxat Muhtar</name>
+    </author>
+    <author>
+      <name>Lu Yin</name>
+    </author>
+    <author>
+      <name>Shilin Yan</name>
+    </author>
+    <author>
+      <name>Li Shen</name>
+    </author>
+    <author>
+      <name>Yi Liang</name>
+    </author>
+    <author>
+      <name>Soroush Vosoughi</name>
+    </author>
+    <author>
+      <name>Shiwei Liu</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.19982v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.19982v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19980v1</id>
+    <updated>2025-08-27T15:39:46Z</updated>
+    <published>2025-08-27T15:39:46Z</published>
+    <title>Evaluating Language Model Reasoning about Confidential Information</title>
+    <summary>  As language models are increasingly deployed as autonomous agents in
+high-stakes settings, ensuring that they reliably follow user-defined rules has
+become a critical safety concern. To this end, we study whether language models
+exhibit contextual robustness, or the capability to adhere to context-dependent
+safety specifications. For this analysis, we develop a benchmark (PasswordEval)
+that measures whether language models can correctly determine when a user
+request is authorized (i.e., with a correct password). We find that current
+open- and closed-source models struggle with this seemingly simple task, and
+that, perhaps surprisingly, reasoning capabilities do not generally improve
+performance. In fact, we find that reasoning traces frequently leak
+confidential information, which calls into question whether reasoning traces
+should be exposed to users in such applications. We also scale the difficulty
+of our evaluation along multiple axes: (i) by adding adversarial user pressure
+through various jailbreaking strategies, and (ii) through longer multi-turn
+conversations where password verification is more challenging. Overall, our
+results suggest that current frontier models are not well-suited to handling
+confidential information, and that reasoning capabilities may need to be
+trained in a different manner to make them safer for release in high-stakes
+settings.
+</summary>
+    <author>
+      <name>Dylan Sam</name>
+    </author>
+    <author>
+      <name>Alexander Robey</name>
+    </author>
+    <author>
+      <name>Andy Zou</name>
+    </author>
+    <author>
+      <name>Matt Fredrikson</name>
+    </author>
+    <author>
+      <name>J. Zico Kolter</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">20 pages</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.19980v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.19980v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19979v1</id>
+    <updated>2025-08-27T15:39:25Z</updated>
+    <published>2025-08-27T15:39:25Z</published>
+    <title>Reducing Street Parking Search Time via Smart Assignment Strategies</title>
+    <summary>  In dense metropolitan areas, searching for street parking adds to traffic
+congestion. Like many other problems, real-time assistants based on mobile
+phones have been proposed, but their effectiveness is understudied. This work
+quantifies how varying levels of user coordination and information availability
+through such apps impact search time and the probability of finding street
+parking. Through a data-driven simulation of Madrid's street parking ecosystem,
+we analyze four distinct strategies: uncoordinated search (Unc-Agn),
+coordinated parking without awareness of non-users (Cord-Agn), an idealized
+oracle system that knows the positions of all non-users (Cord-Oracle), and our
+novel/practical Cord-Approx strategy that estimates non-users' behavior
+probabilistically. The Cord-Approx strategy, instead of requiring knowledge of
+how close non-users are to a certain spot in order to decide whether to
+navigate toward it, uses past occupancy distributions to elongate physical
+distances between system users and alternative parking spots, and then solves a
+Hungarian matching problem to dispatch accordingly. In high-fidelity
+simulations of Madrid's parking network with real traffic data, users of
+Cord-Approx averaged 6.69 minutes to find parking, compared to 19.98 minutes
+for non-users without an app. A zone-level snapshot shows that Cord-Approx
+reduces search time for system users by 72% (range = 67-76%) in central hubs,
+and up to 73% in residential areas, relative to non-users.
+</summary>
+    <author>
+      <name>Behafarid Hemmatpour</name>
+    </author>
+    <author>
+      <name>Javad Dogani</name>
+    </author>
+    <author>
+      <name>Nikolaos Laoutaris</name>
+    </author>
+    <arxiv:doi xmlns:arxiv="http://arxiv.org/schemas/atom">10.1145/3748636.3762748</arxiv:doi>
+    <link title="doi" href="http://dx.doi.org/10.1145/3748636.3762748" rel="related"/>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Please cite the ACM SIGSPATIAL'25 version of this paper</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.19979v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.19979v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19974v1</id>
+    <updated>2025-08-27T15:32:26Z</updated>
+    <published>2025-08-27T15:32:26Z</published>
+    <title>Short-Horizon Predictive Maintenance of Industrial Pumps Using
+  Time-Series Features and Machine Learning</title>
+    <summary>  This study presents a machine learning framework for forecasting short-term
+faults in industrial centrifugal pumps using real-time sensor data. The
+approach aims to predict {EarlyWarning} conditions 5, 15, and 30 minutes in
+advance based on patterns extracted from historical operation. Two lookback
+periods, 60 minutes and 120 minutes, were evaluated using a sliding window
+approach. For each window, statistical features including mean, standard
+deviation, minimum, maximum, and linear trend were extracted, and class
+imbalance was addressed using the SMOTE algorithm. Random Forest and XGBoost
+classifiers were trained and tested on the labeled dataset. Results show that
+the Random Forest model achieved the best short-term forecasting performance
+with a 60-minute window, reaching recall scores of 69.2\% at 5 minutes, 64.9\%
+at 15 minutes, and 48.6\% at 30 minutes. With a 120-minute window, the Random
+Forest model achieved 57.6\% recall at 5 minutes, and improved predictive
+accuracy of 65.6\% at both 15 and 30 minutes. XGBoost displayed similar but
+slightly lower performance. These findings highlight that optimal history
+length depends on the prediction horizon, and that different fault patterns may
+evolve at different timescales. The proposed method offers an interpretable and
+scalable solution for integrating predictive maintenance into real-time
+industrial monitoring systems.
+</summary>
+    <author>
+      <name>Khaled M. A. Alghtus</name>
+    </author>
+    <author>
+      <name>Aiyad Gannan</name>
+    </author>
+    <author>
+      <name>Khalid M. Alhajri</name>
+    </author>
+    <author>
+      <name>Ali L. A. Al Jubouri</name>
+    </author>
+    <author>
+      <name>Hassan A. I. Al-Janahi</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.19974v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.19974v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19972v1</id>
+    <updated>2025-08-27T15:30:06Z</updated>
+    <published>2025-08-27T15:30:06Z</published>
+    <title>GLSim: Detecting Object Hallucinations in LVLMs via Global-Local
+  Similarity</title>
+    <summary>  Object hallucination in large vision-language models presents a significant
+challenge to their safe deployment in real-world applications. Recent works
+have proposed object-level hallucination scores to estimate the likelihood of
+object hallucination; however, these methods typically adopt either a global or
+local perspective in isolation, which may limit detection reliability. In this
+paper, we introduce GLSim, a novel training-free object hallucination detection
+framework that leverages complementary global and local embedding similarity
+signals between image and text modalities, enabling more accurate and reliable
+hallucination detection in diverse scenarios. We comprehensively benchmark
+existing object hallucination detection methods and demonstrate that GLSim
+achieves superior detection performance, outperforming competitive baselines by
+a significant margin.
+</summary>
+    <author>
+      <name>Seongheon Park</name>
+    </author>
+    <author>
+      <name>Yixuan Li</name>
+    </author>
+    <link href="http://arxiv.org/abs/2508.19972v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.19972v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19967v1</id>
+    <updated>2025-08-27T15:21:31Z</updated>
+    <published>2025-08-27T15:21:31Z</published>
+    <title>Assessing the Geolocation Capabilities, Limitations and Societal Risks
+  of Generative Vision-Language Models</title>
+    <summary>  Geo-localization is the task of identifying the location of an image using
+visual cues alone. It has beneficial applications, such as improving disaster
+response, enhancing navigation, and geography education. Recently,
+Vision-Language Models (VLMs) are increasingly demonstrating capabilities as
+accurate image geo-locators. This brings significant privacy risks, including
+those related to stalking and surveillance, considering the widespread uses of
+AI models and sharing of photos on social media. The precision of these models
+is likely to improve in the future. Despite these risks, there is little work
+on systematically evaluating the geolocation precision of Generative VLMs,
+their limits and potential for unintended inferences. To bridge this gap, we
+conduct a comprehensive assessment of the geolocation capabilities of 25
+state-of-the-art VLMs on four benchmark image datasets captured in diverse
+environments. Our results offer insight into the internal reasoning of VLMs and
+highlight their strengths, limitations, and potential societal risks. Our
+findings indicate that current VLMs perform poorly on generic street-level
+images yet achieve notably high accuracy (61\%) on images resembling social
+media content, raising significant and urgent privacy concerns.
+</summary>
+    <author>
+      <name>Oliver Grainge</name>
+    </author>
+    <author>
+      <name>Sania Waheed</name>
+    </author>
+    <author>
+      <name>Jack Stilgoe</name>
+    </author>
+    <author>
+      <name>Michael Milford</name>
+    </author>
+    <author>
+      <name>Shoaib Ehsan</name>
+    </author>
+    <arxiv:comment xmlns:arxiv="http://arxiv.org/schemas/atom">Accepted to AAAI Fall Symposium 2025 on AI Trustworthiness and Risk
+  Assessment for Challenging Contexts (ATRACC)</arxiv:comment>
+    <link href="http://arxiv.org/abs/2508.19967v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2508.19967v1" rel="related" type="application/pdf"/>
+    <arxiv:primary_category xmlns:arxiv="http://arxiv.org/schemas/atom" term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+</feed>

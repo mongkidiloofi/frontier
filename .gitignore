@@ -1,19 +1,21 @@
-# in frontier/.gitignore
-
-# Python
+# Python/Backend
 venv/
-backend/venv/
 __pycache__/
 *.pyc
-
-# Node / Svelte / Vite
-node_modules/
-frontend/node_modules/
-.svelte-kit/
-build/
-dist/
-
-# Secrets
+*.pyo
+*.pyd
 .env
-backend/.env
-frontend/.env
+
+# Node/Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.svelte-kit/
+frontend/build/
+.DS_Store
+
+# IDE & OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
